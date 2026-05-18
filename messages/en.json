@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "title": "Ilkin Ibadov — Fullstack Developer",
+    "description": "Portfolio of a fullstack developer with 4+ years of experience. Next.js, React, Node.js, Supabase."
+  },
+  "nav": {
+    "about": "About",
+    "approach": "How I work",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Ilkin Ibadov",
+    "role": "Fullstack Developer",
+    "cta": "Get in touch",
+    "ctaSecondary": "View experience"
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "Stack, experience and focus areas",
+    "bio": "Fullstack developer with 4+ years of experience building, scaling, and maintaining web and mobile applications for international markets. I specialize in the MERN stack, React Native, and scalable backend architecture. Deep expertise in Next.js for high-load frontends and NestJS for structured services. For over 2 years I've mentored junior engineers in system design, application architecture, and engineering best practices.",
+    "stackTitle": "Tech stack",
+    "stack": {
+      "frontend": "Frontend: React, Next.js, Tailwind, HTML, CSS, SCSS",
+      "backend": "Backend: Node.js, NestJS, Express.js",
+      "mobile": "Mobile: React Native",
+      "databases": "Databases: MongoDB, PostgreSQL, Redis, Supabase",
+      "state": "State management: Redux, Redux Toolkit, Zustand, Context API",
+      "devops": "DevOps: Docker, Kubernetes, AWS",
+      "languages": "Languages: JavaScript, TypeScript",
+      "tools": "Tools: Git, Postman, Figma"
+    },
+    "languagesTitle": "Languages",
+    "languages": "English — fluent (C2, IELTS 8.5), Russian — native",
+    "educationTitle": "Education",
+    "education": "Bachelor's in Computer Engineering — International Humanities University (Ukraine)"
+  },
+  "approach": {
+    "title": "How I work",
+    "subtitle": "Approach to tasks and AI tools",
+    "items": [
+      {
+        "title": "Understand the problem",
+        "text": "I clarify business goals, constraints, and definition of done first. Work is decomposed into iterations with measurable outcomes."
+      },
+      {
+        "title": "Architecture and quality",
+        "text": "API and UI are designed for scale, typing, and testability. Code review, linters, and shared patterns are part of every delivery."
+      },
+      {
+        "title": "Ship fast",
+        "text": "MVP-first mindset: a working end-to-end flow first, then performance and UX improvements."
+      }
+    ],
+    "aiTitle": "How I use AI",
+    "aiItems": [
+      "At daytwo.ai I integrated LLM APIs into a production platform: prompt design, error handling, rate limits, and monitoring.",
+      "Day to day I use Cursor and Copilot for boilerplate, refactors, and docs; I always review the final code manually.",
+      "When mentoring, I show how AI speeds up learning without replacing architecture understanding and debugging skills."
+    ]
+  },
+  "experience": {
+    "title": "Cases & experience",
+    "subtitle": "Real projects and roles",
+    "jobs": [
+      {
+        "role": "Fullstack Developer",
+        "company": "daytwo.ai",
+        "period": "February 2025 — February 2026",
+        "bullets": [
+          "Built and maintained production-grade apps with Next.js, Node.js, Express, and Supabase.",
+          "Integrated AI/LLM APIs into the web platform.",
+          "Worked in a distributed team on rapid prototyping and MVP releases."
+        ]
+      },
+      {
+        "role": "Backend Instructor",
+        "company": "Div Academy",
+        "period": "October 2025 — February 2026",
+        "bullets": [
+          "Taught backend development through hands-on projects and mentorship.",
+          "Designed a curriculum that helped 90% of students significantly improve their technical level."
+        ]
+      },
+      {
+        "role": "MERN Stack Instructor",
+        "company": "STEP IT Academy",
+        "period": "January 2024 — present",
+        "bullets": [
+          "Trained 200+ students in MERN and React Native with practical project mentoring.",
+          "Led programming skill sessions; 90% of students reported major professional growth."
+        ]
+      },
+      {
+        "role": "Web & Mobile Developer",
+        "company": "Sabah.HUB",
+        "period": "April 2023 — October 2024",
+        "bullets": [
+          "Built scalable web and mobile products serving thousands of active users.",
+          "Introduced secure data practices and optimized system performance."
+        ]
+      },
+      {
+        "role": "Web Developer",
+        "company": "BrainPriz",
+        "period": "November 2022 — April 2023",
+        "bullets": [
+          "Designed client-side architecture focused on performance and data security.",
+          "Improved UI/UX and fixed critical bugs — 15% increase in user engagement."
+        ]
+      },
+      {
+        "role": "Web & Mobile Developer",
+        "company": "IZZI",
+        "period": "June 2022 — September 2022",
+        "bullets": [
+          "Created and optimized mobile and web apps in close collaboration with cross-functional teams."
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Leave a message — I'll get back to you soon",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email",
+    "comment": "Message",
+    "submit": "Send",
+    "polish": "Polish message (AI)",
+    "polishing": "Polishing…",
+    "polishError": "Could not polish the text. Please try again later.",
+    "polishUnavailable": "AI helper is unavailable without OPENAI_API_KEY.",
+    "success": "Message sent! A copy will arrive at your email.",
+    "error": "Failed to send. Please check your data and try again.",
+    "loading": "Sending…",
+    "validation": {
+      "name": "Enter a name (at least 2 characters)",
+      "phone": "Enter a valid phone number",
+      "email": "Enter a valid email",
+      "comment": "Message must be at least 10 characters"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  },
+  "links": {
+    "email": "ilkin.ibadzada@gmail.com",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "telegram": "Telegram"
+  },
+  "chatbot": {
+    "title": "Ask about me",
+    "subtitle": "Portfolio AI assistant",
+    "welcome": "Hi! I can answer questions about my experience, stack, projects, and collaboration. What would you like to know?",
+    "placeholder": "e.g. What is your experience with Next.js?",
+    "send": "Send",
+    "open": "Open chat",
+    "close": "Close chat",
+    "hint": "Professional questions about Ilkin only",
+    "error": "Could not get a reply. Please try again later.",
+    "unavailable": "Chat is unavailable without OPENAI_API_KEY."
+  }
+}
