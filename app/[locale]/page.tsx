@@ -1,6 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
 import { RateHero } from "@/components/sections/RateHero";
-import { TrackRecord } from "@/components/sections/TrackRecord";
 import { Skills } from "@/components/sections/Skills";
 import { Projects } from "@/components/sections/Projects";
 import { Rates } from "@/components/sections/Rates";
@@ -21,7 +20,6 @@ export default async function HomePage({ params }: PageProps) {
   return (
     <>
       <RateHero />
-      <TrackRecord />
       <Skills />
       <Projects />
       <Rates />

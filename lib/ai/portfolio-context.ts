@@ -31,10 +31,6 @@ Specialties: MERN stack, React Native, scalable backend architecture, Next.js (h
 - MSc in Computer Science — Nazarbayev University
 - BSc in Computer Engineering — International University
 
-## Track record (aggregate, from repository history and source code)
-174k lines of application code · 3 product projects · 165 database models · 144 screens and pages ·
-2 mobile applications · 149 repositories since 2022
-
 ## Projects
 1. SetFlow (in a team) — multi-tenant CRM + warehouse platform: deals and pipelines, double-entry stock
    movements, documents and quotes, omnichannel inbox, campaigns, subscriptions. Live in production.

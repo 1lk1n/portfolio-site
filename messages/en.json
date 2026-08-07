@@ -4,7 +4,6 @@
     "description": "Rates, services and projects of a fullstack developer with 4+ years of experience. TypeScript, Next.js, React Native, Node.js, PostgreSQL."
   },
   "nav": {
-    "record": "Track record",
     "skills": "Skills",
     "projects": "Projects",
     "rates": "Rates",
@@ -14,21 +13,9 @@
   "rateHero": {
     "name": "Ilkin Ibadov",
     "role": "Full-Stack Engineer — TypeScript / Node.js / React",
-    "lede": "Rates and terms by type of work. The figures below are grounded in the scope and nature of work I deliver in practice — the “Track record” section gives verifiable numbers.",
+    "lede": "Rates and terms by type of work. The figures below are grounded in the scope and nature of work I deliver in practice.",
     "ctaRates": "See rates",
     "ctaContact": "Get in touch"
-  },
-  "trackRecord": {
-    "title": "Track record",
-    "intro": "Aggregate figures across three product projects. The numbers come from repository history and source code, not from a CV description.",
-    "facts": {
-      "lines": "lines of application code",
-      "projects": "product projects",
-      "models": "database models",
-      "screens": "screens and pages",
-      "apps": "mobile applications",
-      "repos": "repositories since 2022"
-    }
   },
   "skills": {
     "title": "Skills & stack",
@@ -230,7 +217,7 @@
     ]
   },
   "justification": {
-    "title": "What justifies the rate",
+    "title": "Rate",
     "items": [
       {
         "strong": "One person instead of two.",

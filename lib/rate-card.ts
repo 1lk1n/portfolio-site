@@ -7,15 +7,6 @@
  * looked up by the ids below.
  */
 
-export const FACTS = [
-  { id: "lines", value: "174k" },
-  { id: "projects", value: "3" },
-  { id: "models", value: "165" },
-  { id: "screens", value: "144" },
-  { id: "apps", value: "2" },
-  { id: "repos", value: "149" },
-] as const;
-
 type Metric = {
   /** Absent for metrics that are a statement rather than a figure. */
   value?: string;

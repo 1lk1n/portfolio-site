@@ -7,7 +7,6 @@ import { useState } from "react";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 
 const navItems = [
-  { key: "record", href: "#record" },
   { key: "skills", href: "#skills" },
   { key: "projects", href: "#projects" },
   { key: "rates", href: "#rates" },
