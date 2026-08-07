@@ -12,8 +12,7 @@
   },
   "rateHero": {
     "name": "Ilkin Ibadov",
-    "role": "Full-Stack Engineer — TypeScript / Node.js / React",
-    "lede": "Rates and terms by type of work. The figures below are grounded in the scope and nature of work I deliver in practice.",
+    "lede": "Fullstack developer with over 4 years of experience. I do it all: from frontend and mobile development to backend, infrastructure deployment and security.",
     "ctaRates": "See rates",
     "ctaContact": "Get in touch"
   },
@@ -217,7 +216,7 @@
     ]
   },
   "justification": {
-    "title": "Rate",
+    "title": "Why me",
     "items": [
       {
         "strong": "One person instead of two.",

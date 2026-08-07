@@ -25,13 +25,7 @@ export function RateHero() {
         </motion.h1>
         <motion.p
           variants={fadeUp}
-          className="mt-4 text-xl font-medium text-foreground md:text-2xl"
-        >
-          {t("role")}
-        </motion.p>
-        <motion.p
-          variants={fadeUp}
-          className="mx-auto mt-4 max-w-[62ch] text-[15px] leading-relaxed text-muted md:text-[17px]"
+          className="mx-auto mt-5 max-w-[62ch] text-[15px] leading-relaxed text-muted md:text-[17px]"
         >
           {t("lede")}
         </motion.p>
