@@ -25,12 +25,12 @@ export function TrackRecord() {
           <motion.div
             key={fact.id}
             variants={fadeUp}
-            className="nm-raised rounded-2xl bg-background px-5 py-5"
+            className="rounded-3xl bg-surface px-6 py-6"
           >
-            <b className="block font-mono text-2xl font-bold tracking-tight text-ink md:text-[27px]">
+            <b className="block text-3xl font-semibold tracking-tight text-foreground tabular-nums md:text-[34px]">
               {fact.value}
             </b>
-            <span className="mt-2 block text-xs leading-snug text-muted">
+            <span className="mt-1.5 block text-[13px] leading-snug text-muted">
               {t(`facts.${fact.id}`)}
             </span>
           </motion.div>

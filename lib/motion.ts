@@ -8,11 +8,6 @@ export const fadeUp = {
 export const staggerContainer = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.1 },
+    transition: { staggerChildren: 0.08 },
   },
-};
-
-export const cardHover = {
-  rest: { y: 0, boxShadow: "0 4px 20px rgba(51, 78, 172, 0.08)" },
-  hover: { y: -4, boxShadow: "0 12px 32px rgba(51, 78, 172, 0.15)" },
 };

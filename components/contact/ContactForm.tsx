@@ -47,16 +47,13 @@ export function ContactForm() {
     }
   };
 
-  // Fields are pressed into the page; the outline on focus is what carries
-  // visibility, since a soft shadow alone is not a focus indicator.
+  // Apple ID-style fields: hairline border, blue border + soft blue halo on focus.
   const fieldClass =
-    "nm-inset w-full rounded-xl bg-background px-4 py-3 text-sm text-foreground outline-none placeholder:text-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink";
+    "w-full rounded-xl border border-hairline bg-background px-4 py-3 text-sm text-foreground outline-none transition-[border-color,box-shadow] placeholder:text-muted focus:border-accent focus:ring-4 focus:ring-accent/15";
 
   const labelClass = "mb-1.5 block text-[13px] font-medium text-foreground";
 
-  // No red in a black-and-white palette — errors read through the marker,
-  // the weight and the text itself.
-  const errorClass = "mt-1.5 flex items-start gap-1.5 text-[12.5px] font-medium text-ink";
+  const errorClass = "mt-1.5 text-[13px] text-danger";
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="mx-auto max-w-xl space-y-5">
@@ -66,10 +63,7 @@ export function ContactForm() {
         </label>
         <input id="name" {...register("name")} className={fieldClass} />
         {errors.name && (
-          <p className={errorClass}>
-            <span aria-hidden="true">!</span>
-            {t(`validation.${errors.name.message}`)}
-          </p>
+          <p className={errorClass}>{t(`validation.${errors.name.message}`)}</p>
         )}
       </div>
 
@@ -79,10 +73,7 @@ export function ContactForm() {
         </label>
         <input id="phone" type="tel" {...register("phone")} className={fieldClass} />
         {errors.phone && (
-          <p className={errorClass}>
-            <span aria-hidden="true">!</span>
-            {t(`validation.${errors.phone.message}`)}
-          </p>
+          <p className={errorClass}>{t(`validation.${errors.phone.message}`)}</p>
         )}
       </div>
 
@@ -92,10 +83,7 @@ export function ContactForm() {
         </label>
         <input id="email" type="email" {...register("email")} className={fieldClass} />
         {errors.email && (
-          <p className={errorClass}>
-            <span aria-hidden="true">!</span>
-            {t(`validation.${errors.email.message}`)}
-          </p>
+          <p className={errorClass}>{t(`validation.${errors.email.message}`)}</p>
         )}
       </div>
 
@@ -116,24 +104,21 @@ export function ContactForm() {
           className={`${fieldClass} resize-y`}
         />
         {errors.comment && (
-          <p className={errorClass}>
-            <span aria-hidden="true">!</span>
-            {t(`validation.${errors.comment.message}`)}
-          </p>
+          <p className={errorClass}>{t(`validation.${errors.comment.message}`)}</p>
         )}
       </div>
 
       <button
         type="submit"
         disabled={status === "loading"}
-        className="nm-raised w-full rounded-full py-3.5 text-sm font-semibold text-ink transition-shadow focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink active:nm-inset disabled:cursor-not-allowed disabled:nm-inset disabled:text-muted"
+        className="w-full rounded-full bg-accent-fill py-3 text-[15px] font-medium text-white transition-colors hover:bg-accent-fill-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent active:opacity-80 disabled:cursor-not-allowed disabled:opacity-50"
       >
         {status === "loading" ? t("loading") : t("submit")}
       </button>
 
       {status === "success" && (
         <p
-          className="nm-raised flex items-start gap-2.5 rounded-xl px-4 py-3 text-[13px] text-ink"
+          className="flex items-start gap-2.5 rounded-xl bg-success/10 px-4 py-3 text-[13px] font-medium text-success"
           role="status"
         >
           <span aria-hidden="true">✓</span>
@@ -142,10 +127,9 @@ export function ContactForm() {
       )}
       {status === "error" && (
         <p
-          className="nm-inset flex items-start gap-2.5 rounded-xl px-4 py-3 text-[13px] font-medium text-ink"
+          className="rounded-xl bg-danger/10 px-4 py-3 text-[13px] font-medium text-danger"
           role="alert"
         >
-          <span aria-hidden="true">!</span>
           {t("error")}
         </p>
       )}

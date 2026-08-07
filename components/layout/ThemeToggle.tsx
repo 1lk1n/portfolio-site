@@ -35,7 +35,7 @@ export function ThemeToggle() {
       onClick={toggle}
       aria-label={t("theme")}
       title={t("theme")}
-      className="nm-raised-sm rounded-xl p-2 text-muted transition-colors hover:text-ink active:nm-inset-sm"
+      className="rounded-full p-2 text-muted transition-colors hover:bg-surface hover:text-foreground"
     >
       {/* Sun — shown while the light palette is active. */}
       <svg

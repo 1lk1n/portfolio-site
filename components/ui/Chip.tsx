@@ -5,11 +5,11 @@ type ChipProps = {
   className?: string;
 };
 
-/** A tech tag — sunk into the surface so it reads quieter than the panel around it. */
+/** A tech tag — a quiet page-coloured pill that sits on a grey card. */
 export function Chip({ children, className = "" }: ChipProps) {
   return (
     <span
-      className={`nm-inset-sm rounded-lg px-2.5 py-1.5 font-mono text-[11.5px] leading-none text-muted ${className}`}
+      className={`rounded-full bg-background px-3 py-1.5 text-xs leading-none text-muted ${className}`}
     >
       {children}
     </span>

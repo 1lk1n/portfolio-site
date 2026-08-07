@@ -15,47 +15,44 @@ export function Modifiers() {
       <SectionHeading title={t("title")} />
 
       <motion.div
-        className="nm-raised overflow-hidden rounded-2xl bg-background"
+        className="overflow-hidden rounded-3xl bg-surface"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-60px" }}
         variants={fadeUp}
       >
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[560px] text-left text-sm">
+          <table className="w-full min-w-140 text-left text-sm">
             <thead>
-              <tr className="border-b border-foreground/25">
-                <th className="px-5 py-3.5 font-mono text-[11px] font-bold uppercase tracking-[0.07em] text-muted">
+              <tr className="border-b border-hairline">
+                <th className="px-6 py-4 text-xs font-semibold uppercase tracking-wide text-muted">
                   {t("columns.condition")}
                 </th>
-                <th className="px-5 py-3.5 text-right font-mono text-[11px] font-bold uppercase tracking-[0.07em] text-muted">
+                <th className="px-6 py-4 text-right text-xs font-semibold uppercase tracking-wide text-muted">
                   {t("columns.uplift")}
                 </th>
-                <th className="px-5 py-3.5 font-mono text-[11px] font-bold uppercase tracking-[0.07em] text-muted">
+                <th className="px-6 py-4 text-xs font-semibold uppercase tracking-wide text-muted">
                   {t("columns.why")}
                 </th>
               </tr>
             </thead>
             <tbody>
               {MODIFIERS.map((row) => (
-                <tr key={row.id} className="border-b border-line last:border-0">
-                  <td className="px-5 py-3.5 align-top text-foreground">
+                <tr key={row.id} className="border-b border-hairline last:border-0">
+                  <td className="px-6 py-4 align-top text-sm text-foreground">
                     {t(`rows.${row.id}.condition`)}
                   </td>
-                  <td className="whitespace-nowrap px-5 py-3.5 text-right align-top">
-                    {/* A discount presses into the surface, an uplift stands out of
-                        it — the distinction the original made with green. */}
+                  <td className="whitespace-nowrap px-6 py-4 text-right align-top">
+                    {/* Green is the money-saved colour; uplifts stay neutral. */}
                     <span
-                      className={`inline-block rounded-lg px-2.5 py-1.5 font-mono text-[13px] ${
-                        row.discount
-                          ? "nm-inset-sm text-muted"
-                          : "nm-raised-sm font-semibold text-ink"
+                      className={`text-sm font-medium tabular-nums ${
+                        row.discount ? "text-success" : "text-foreground"
                       }`}
                     >
                       {t(`rows.${row.id}.uplift`)}
                     </span>
                   </td>
-                  <td className="px-5 py-3.5 align-top text-[13.5px] text-muted">
+                  <td className="px-6 py-4 align-top text-[13px] text-muted">
                     {t(`rows.${row.id}.why`)}
                   </td>
                 </tr>

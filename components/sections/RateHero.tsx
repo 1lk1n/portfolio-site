@@ -9,39 +9,46 @@ export function RateHero() {
   const links = useTranslations("links");
 
   return (
-    <section className="pt-12 pb-4 md:pt-20 md:pb-6">
+    /* Apple product-page hero: centred, type-led, one blue pill. */
+    <section className="pt-16 pb-4 md:pt-24 md:pb-6">
       <motion.div
-        className="mx-auto max-w-5xl px-5 md:px-6"
+        className="mx-auto max-w-5xl px-5 text-center md:px-6"
         variants={staggerContainer}
         initial="hidden"
         animate="visible"
       >
         <motion.h1
           variants={fadeUp}
-          className="text-3xl font-bold tracking-tight text-ink md:text-4xl"
+          className="text-5xl font-semibold tracking-[-0.02em] text-foreground md:text-6xl lg:text-7xl"
         >
           {t("name")}
         </motion.h1>
-        <motion.p variants={fadeUp} className="mt-2 text-base font-semibold md:text-lg">
+        <motion.p
+          variants={fadeUp}
+          className="mt-4 text-xl font-medium text-foreground md:text-2xl"
+        >
           {t("role")}
         </motion.p>
         <motion.p
           variants={fadeUp}
-          className="mt-4 max-w-[62ch] text-sm leading-relaxed text-muted md:text-[15px]"
+          className="mx-auto mt-4 max-w-[62ch] text-[15px] leading-relaxed text-muted md:text-[17px]"
         >
           {t("lede")}
         </motion.p>
 
-        <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
+        <motion.div
+          variants={fadeUp}
+          className="mt-8 flex flex-wrap items-center justify-center gap-3"
+        >
           <a
             href="#rates"
-            className="nm-raised rounded-full px-6 py-3 text-sm font-semibold text-ink transition-shadow active:nm-inset"
+            className="rounded-full bg-accent-fill px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-fill-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent active:opacity-80"
           >
             {t("ctaRates")}
           </a>
           <a
             href="#contact"
-            className="nm-inset-sm rounded-full px-6 py-3 text-sm font-semibold text-muted transition-shadow hover:text-ink"
+            className="rounded-full bg-surface px-5 py-2.5 text-sm font-medium text-accent transition-colors hover:bg-hairline/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             {t("ctaContact")}
           </a>
@@ -49,16 +56,16 @@ export function RateHero() {
 
         <motion.div
           variants={fadeUp}
-          className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[13px] text-muted"
+          className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[13px]"
         >
-          <a href={`mailto:${links("email")}`} className="hover:text-ink">
+          <a href={`mailto:${links("email")}`} className="text-muted transition-colors hover:text-accent">
             {links("email")}
           </a>
           <a
             href="https://linkedin.com/in/ilkinibadov"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-ink"
+            className="text-muted transition-colors hover:text-accent"
           >
             {links("linkedin")}
           </a>
@@ -66,11 +73,11 @@ export function RateHero() {
             href="https://github.com/ilkin-ibadov"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-ink"
+            className="text-muted transition-colors hover:text-accent"
           >
             {links("github")}
           </a>
-          <a href="https://t.me/+994515391161" className="hover:text-ink">
+          <a href="https://t.me/+994515391161" className="text-muted transition-colors hover:text-accent">
             {links("telegram")}
           </a>
         </motion.div>

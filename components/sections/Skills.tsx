@@ -28,12 +28,12 @@ export function Skills() {
           <motion.div
             key={group.id}
             variants={fadeUp}
-            className="nm-raised rounded-2xl bg-background px-5 py-5"
+            className="rounded-3xl bg-surface px-6 py-6"
           >
-            <h3 className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted">
+            <h3 className="text-xs font-semibold uppercase tracking-wide text-muted">
               {t(`groups.${group.id}`)}
             </h3>
-            <div className="mt-3 flex flex-wrap gap-2">
+            <div className="mt-4 flex flex-wrap gap-2">
               {group.items.map((item) => (
                 <Chip key={item}>{item}</Chip>
               ))}
@@ -49,14 +49,11 @@ export function Skills() {
         whileInView="visible"
         viewport={{ once: true, margin: "-60px" }}
       >
-        <motion.div
-          variants={fadeUp}
-          className="nm-raised rounded-2xl bg-background px-5 py-5"
-        >
-          <h3 className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted">
+        <motion.div variants={fadeUp} className="rounded-3xl bg-surface px-6 py-6">
+          <h3 className="text-xs font-semibold uppercase tracking-wide text-muted">
             {t("spokenTitle")}
           </h3>
-          <ul className="mt-3 space-y-1.5">
+          <ul className="mt-4 space-y-1.5">
             {spoken.map((i) => (
               <li key={i} className="text-sm text-foreground">
                 {t(`spoken.${i}`)}
@@ -65,18 +62,17 @@ export function Skills() {
           </ul>
         </motion.div>
 
-        <motion.div
-          variants={fadeUp}
-          className="nm-raised rounded-2xl bg-background px-5 py-5"
-        >
-          <h3 className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted">
+        <motion.div variants={fadeUp} className="rounded-3xl bg-surface px-6 py-6">
+          <h3 className="text-xs font-semibold uppercase tracking-wide text-muted">
             {t("educationTitle")}
           </h3>
-          <ul className="mt-3 space-y-3">
+          <ul className="mt-4 space-y-3">
             {education.map((i) => (
               <li key={i}>
-                <p className="text-sm text-foreground">{t(`education.${i}.degree`)}</p>
-                <p className="text-[13px] font-semibold text-ink">
+                <p className="text-sm font-medium text-foreground">
+                  {t(`education.${i}.degree`)}
+                </p>
+                <p className="mt-0.5 text-[13px] text-muted">
                   {t(`education.${i}.school`)}
                 </p>
               </li>

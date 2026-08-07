@@ -25,15 +25,15 @@ export function Engagement() {
           <motion.div
             key={id}
             variants={fadeUp}
-            className="nm-raised rounded-2xl bg-background px-5 py-5"
+            className="rounded-3xl bg-surface px-6 py-6"
           >
-            <h3 className="text-[15px] font-semibold text-foreground">
+            <h3 className="text-[17px] font-semibold text-foreground">
               {t(`items.${id}.title`)}
             </h3>
-            <p className="mt-2 font-mono text-lg font-bold tracking-tight text-ink">
+            <p className="mt-2 text-2xl font-semibold tracking-tight text-foreground tabular-nums">
               {t(`items.${id}.price`)}
             </p>
-            <p className="mt-2.5 text-[13.5px] leading-relaxed text-muted">
+            <p className="mt-2.5 text-sm leading-relaxed text-muted">
               {t(`items.${id}.text`)}
             </p>
           </motion.div>

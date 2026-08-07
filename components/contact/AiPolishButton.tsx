@@ -55,14 +55,12 @@ export function AiPolishButton({ comment, onPolished }: AiPolishButtonProps) {
         type="button"
         onClick={handlePolish}
         disabled={loading || !comment || comment.length < 5}
-        className="nm-raised-sm rounded-lg px-2.5 py-1.5 text-[11px] font-medium text-muted transition-shadow hover:text-ink active:nm-inset-sm disabled:cursor-not-allowed disabled:opacity-50"
+        className="text-xs font-medium text-accent underline-offset-2 transition-colors hover:underline disabled:cursor-not-allowed disabled:opacity-50"
       >
         {loading ? t("polishing") : t("polish")}
       </button>
       {error && (
-        <span className="max-w-55 text-right text-[11px] font-medium text-ink">
-          {error}
-        </span>
+        <span className="max-w-55 text-right text-[11px] text-danger">{error}</span>
       )}
     </div>
   );

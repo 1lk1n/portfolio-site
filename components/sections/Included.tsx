@@ -23,37 +23,30 @@ export function Included() {
         whileInView="visible"
         viewport={{ once: true, margin: "-60px" }}
       >
-        {/* What you get stands out of the page; what costs extra sits in it. */}
-        <motion.div
-          variants={fadeUp}
-          className="nm-raised rounded-2xl bg-background px-5 py-5"
-        >
-          <h3 className="text-[15px] font-semibold text-ink">{t("includedTitle")}</h3>
+        {/* Twin cards; the markers carry the distinction — blue ✓ for what the
+            rate covers, a quiet dot for what it doesn't. */}
+        <motion.div variants={fadeUp} className="rounded-3xl bg-surface px-6 py-6">
+          <h3 className="text-[17px] font-semibold text-foreground">{t("includedTitle")}</h3>
           <ul className="mt-4 space-y-2.5">
             {included.map((i) => (
-              <li key={i} className="flex gap-3 text-[13.5px] leading-relaxed text-muted">
-                <span
-                  aria-hidden="true"
-                  className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-ink"
-                />
+              <li key={i} className="flex gap-2.5 text-sm leading-relaxed text-foreground">
+                <span aria-hidden="true" className="mt-px font-semibold text-accent">
+                  ✓
+                </span>
                 {t(`included.${i}`)}
               </li>
             ))}
           </ul>
         </motion.div>
 
-        <motion.div
-          variants={fadeUp}
-          className="nm-inset rounded-2xl bg-background px-5 py-5"
-        >
-          <h3 className="text-[15px] font-semibold text-foreground">{t("billedTitle")}</h3>
+        <motion.div variants={fadeUp} className="rounded-3xl bg-surface px-6 py-6">
+          <h3 className="text-[17px] font-semibold text-foreground">{t("billedTitle")}</h3>
           <ul className="mt-4 space-y-2.5">
             {billed.map((i) => (
-              <li key={i} className="flex gap-3 text-[13.5px] leading-relaxed text-muted">
-                <span
-                  aria-hidden="true"
-                  className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full border border-muted"
-                />
+              <li key={i} className="flex gap-2.5 text-sm leading-relaxed text-foreground">
+                <span aria-hidden="true" className="mt-px text-muted">
+                  •
+                </span>
                 {t(`billed.${i}`)}
               </li>
             ))}

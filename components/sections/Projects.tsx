@@ -26,18 +26,18 @@ export function Projects() {
           <motion.article
             key={project.id}
             variants={fadeUp}
-            className="nm-raised rounded-2xl bg-background px-5 py-5 md:px-6"
+            className="rounded-3xl bg-surface px-6 py-6"
           >
-            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-2">
-              <h3 className="text-base font-semibold text-ink md:text-[17px]">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+              <h3 className="text-[17px] font-semibold text-foreground">
                 {project.name ?? t(`items.${project.id}.title`)}
               </h3>
-              <span className="nm-inset-sm rounded-md px-2 py-1 font-mono text-[10px] uppercase tracking-[0.06em] text-muted">
+              <span className="rounded-full bg-accent/10 px-2.5 py-1 text-[11px] font-medium text-accent">
                 {project.solo ? t("roleSolo") : t("roleTeam")}
               </span>
             </div>
 
-            <p className="mt-2.5 text-[13.5px] leading-relaxed text-muted">
+            <p className="mt-2.5 text-sm leading-relaxed text-muted">
               {t(`items.${project.id}.summary`)}
             </p>
 
@@ -47,11 +47,11 @@ export function Projects() {
               ))}
             </div>
 
-            <div className="mt-4 flex flex-wrap gap-x-7 gap-y-3 border-t border-line pt-4">
+            <div className="mt-5 flex flex-wrap gap-x-8 gap-y-3 border-t border-hairline pt-4">
               {project.metrics.map((metric) => (
                 <div key={metric.id}>
                   {metric.value && (
-                    <b className="block font-mono text-[15px] font-bold text-ink">
+                    <b className="block text-[15px] font-semibold text-foreground tabular-nums">
                       {metric.value}
                     </b>
                   )}
@@ -66,14 +66,14 @@ export function Projects() {
       </motion.div>
 
       <motion.div
-        className="nm-inset mt-6 rounded-2xl bg-background px-5 py-5 md:px-6"
+        className="mt-6 rounded-2xl bg-surface px-6 py-5"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeUp}
       >
-        <p className="text-[13.5px] leading-relaxed text-muted">
-          <strong className="font-semibold text-ink">{t("note.strong")}</strong>{" "}
+        <p className="text-sm leading-relaxed text-muted">
+          <strong className="font-semibold text-foreground">{t("note.strong")}</strong>{" "}
           {t("note.text")}
         </p>
       </motion.div>

@@ -24,11 +24,13 @@ export function Header() {
   const localePath = pathname.replace(`/${locale}`, `/${switchLocale}`) || `/${switchLocale}`;
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 shadow-[0_8px_18px_-12px_var(--sink)] backdrop-blur-md">
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-3.5 md:px-6">
+    /* The Apple nav bar: slim, frosted glass over the content, closed off by a
+       hairline rather than a shadow. */
+    <header className="sticky top-0 z-50 border-b border-hairline bg-background/80 backdrop-blur-xl backdrop-saturate-150">
+      <div className="mx-auto flex h-12 max-w-5xl items-center justify-between gap-4 px-5 md:px-6">
         <Link
           href={`/${locale}`}
-          className="nm-raised-sm rounded-xl px-3 py-2 text-sm font-bold tracking-tight text-ink"
+          className="text-[15px] font-semibold tracking-tight text-foreground"
         >
           II
         </Link>
@@ -38,26 +40,26 @@ export function Header() {
             <a
               key={item.key}
               href={item.href}
-              className="text-[13px] font-medium text-muted transition-colors hover:text-ink"
+              className="text-xs text-muted transition-colors hover:text-foreground"
             >
               {t(item.key)}
             </a>
           ))}
         </nav>
 
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-1.5">
           <ThemeToggle />
 
           <Link
             href={localePath}
-            className="nm-raised-sm rounded-xl px-3 py-2 font-mono text-[11px] font-bold tracking-[0.06em] text-muted transition-colors hover:text-ink"
+            className="rounded-full px-3 py-1.5 text-xs font-medium text-muted transition-colors hover:bg-surface hover:text-foreground"
           >
             {locale === "ru" ? "EN" : "RU"}
           </Link>
 
           <button
             type="button"
-            className="nm-raised-sm rounded-xl p-2 text-ink md:hidden"
+            className="rounded-full p-2 text-foreground transition-colors hover:bg-surface md:hidden"
             onClick={() => setOpen(!open)}
             aria-label="Menu"
             aria-expanded={open}
@@ -74,12 +76,12 @@ export function Header() {
       </div>
 
       {open && (
-        <nav className="border-t border-line px-5 py-3 md:hidden">
+        <nav className="border-t border-hairline bg-background/95 px-5 py-3 backdrop-blur-xl md:hidden">
           {navItems.map((item) => (
             <a
               key={item.key}
               href={item.href}
-              className="block py-2 text-sm font-medium text-muted"
+              className="block py-2.5 text-sm font-medium text-foreground"
               onClick={() => setOpen(false)}
             >
               {t(item.key)}
