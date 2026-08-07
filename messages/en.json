@@ -30,16 +30,16 @@
       "tools": "Tools & libraries"
     },
     "spokenTitle": "Languages",
-    "spoken": ["English — C2, IELTS 8.5", "Russian — conversational"],
+    "spoken": ["English — C2 — IELTS 8.5", "Russian — fluent"],
     "educationTitle": "Education",
     "education": [
       {
-        "degree": "MSc in Computer Science",
+        "degree": "MSc in Computer Science (Abai Kunanbayev scholarship)",
         "school": "Nazarbayev University"
       },
       {
         "degree": "BSc in Computer Engineering",
-        "school": "International University"
+        "school": "International University (Odesa, Ukraine)"
       }
     ]
   },

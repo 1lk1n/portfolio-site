@@ -25,11 +25,11 @@ Specialties: MERN stack, React Native, scalable backend architecture, Next.js (h
 
 ## Languages
 - English: C2, IELTS 8.5
-- Russian: conversational
+- Russian: fluent
 
 ## Education
-- MSc in Computer Science — Nazarbayev University
-- BSc in Computer Engineering — International University
+- MSc in Computer Science — Nazarbayev University (Abai Kunanbayev scholarship)
+- BSc in Computer Engineering — International University (Odesa, Ukraine)
 
 ## Projects
 1. SetFlow (in a team) — multi-tenant CRM + warehouse platform: deals and pipelines, double-entry stock
