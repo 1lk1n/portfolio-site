@@ -8,6 +8,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AiAvailabilityProvider } from "@/components/ai/AiAvailabilityProvider";
 import { PortfolioChatbot } from "@/components/chat/PortfolioChatbot";
+import { themeInitScript } from "@/lib/theme";
 import "../globals.css";
 
 const inter = Inter({
@@ -54,8 +55,18 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
     <html
       lang={locale}
       data-scroll-behavior="smooth"
+      // The pre-paint script below stamps data-theme before React hydrates.
+      suppressHydrationWarning
       className={`${inter.variable} h-full antialiased`}
     >
+      <head>
+        {/* Must be a plain synchronous script in <head>, not next/script:
+            `beforeInteractive` orders against Next's modules but does not block
+            the first paint, and React only hoists scripts that have a `src`.
+            Running before <body> is parsed is the whole point — it is what a
+            stored theme has to beat. */}
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="flex min-h-full flex-col bg-background text-foreground">
         <NextIntlClientProvider messages={messages}>
           <AiAvailabilityProvider>

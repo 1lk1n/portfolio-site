@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
 
 const navItems = [
   { key: "record", href: "#record" },
@@ -45,6 +46,8 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2.5">
+          <ThemeToggle />
+
           <Link
             href={localePath}
             className="nm-raised-sm rounded-xl px-3 py-2 font-mono text-[11px] font-bold tracking-[0.06em] text-muted transition-colors hover:text-ink"

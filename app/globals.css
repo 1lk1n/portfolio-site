@@ -3,37 +3,80 @@
 /* ─────────────────────────────────────────────────────────────
    Black & white neumorphism.
 
-   Every surface shares the page background — depth comes only
-   from a light source at the top-left: a white highlight on that
-   edge, a grey shadow on the opposite one. Because the palette is
-   achromatic, emphasis is carried by depth, weight and size
-   instead of hue.
+   Every surface shares the page background and takes its shape
+   from a light source at the top-left: a highlight on that edge,
+   a shadow on the opposite one. Because the palette is achromatic,
+   emphasis is carried by depth, weight and size instead of hue.
+
+   The page is pure white in light and pure black in dark, which
+   leaves the effect only one edge to work with — nothing is
+   lighter than #fff, nothing darker than #000. So each theme
+   spends its whole shadow budget on the edge it still has: on
+   white the shadow carries every surface, on black the highlight
+   does. The paired token is set to the background colour, where it
+   renders invisibly and costs nothing.
    ───────────────────────────────────────────────────────────── */
 :root {
-  /* Native scrollbars and form controls follow the same two themes. */
-  color-scheme: light dark;
+  /* Both palettes are defined once here. The dark one has to be *applied* by
+     two separate selectors below — the system preference and an explicit
+     choice — and naming the values keeps that repetition from letting the two
+     drift apart. `light-dark()` would remove the repetition entirely, but it
+     needs Safari 17.5+, newer than this app's browser baseline, and an
+     unsupported colour function leaves tokens unset rather than degraded. */
+  --light-background: #ffffff;
+  --light-foreground: #101010;
+  --light-muted: #5a5a5a;
+  --light-line: #dedede;
+  --light-ink: #000000;
+  --light-raise: #ffffff; /* no headroom above white — invisible by design */
+  --light-sink: #c5c5c5; /* carries the whole effect in this theme */
 
-  --background: #e8e8e8;
-  --foreground: #171717;
-  --muted: #5f6166;
-  --line: #d6d6d6;
-  --ink: #0d0d0d; /* strongest emphasis — replaces an accent colour */
+  --dark-background: #000000;
+  --dark-foreground: #f0f0f0;
+  --dark-muted: #9a9a9a;
+  --dark-line: #2b2b2b;
+  --dark-ink: #ffffff;
+  --dark-raise: #2e2e2e; /* carries the whole effect in this theme */
+  --dark-sink: #000000; /* no headroom below black — invisible by design */
 
-  --raise: #ffffff; /* highlight edge */
-  --sink: #bcbcbc; /* shadow edge */
+  /* Native scrollbars and form controls follow the resolved theme. */
+  color-scheme: light;
+
+  --background: var(--light-background);
+  --foreground: var(--light-foreground);
+  --muted: var(--light-muted);
+  --line: var(--light-line);
+  --ink: var(--light-ink); /* strongest emphasis — replaces an accent colour */
+  --raise: var(--light-raise);
+  --sink: var(--light-sink);
 }
 
+/* System preference — unless the reader has explicitly chosen light. */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1e1e20;
-    --foreground: #ededed;
-    --muted: #9b9ca1;
-    --line: #2c2c2f;
-    --ink: #ffffff;
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
 
-    --raise: #292a2d;
-    --sink: #131314;
+    --background: var(--dark-background);
+    --foreground: var(--dark-foreground);
+    --muted: var(--dark-muted);
+    --line: var(--dark-line);
+    --ink: var(--dark-ink);
+    --raise: var(--dark-raise);
+    --sink: var(--dark-sink);
   }
+}
+
+/* Explicit choice — must win over a light system setting. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --background: var(--dark-background);
+  --foreground: var(--dark-foreground);
+  --muted: var(--dark-muted);
+  --line: var(--dark-line);
+  --ink: var(--dark-ink);
+  --raise: var(--dark-raise);
+  --sink: var(--dark-sink);
 }
 
 @theme inline {
@@ -91,6 +134,44 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* The theme toggle ships both icons and lets CSS reveal the right one. That
+   keeps its server-rendered markup identical in either theme, so the button
+   needs no client state, cannot mismatch on hydration, and never flashes the
+   wrong icon. Each icon names the theme it represents, not the one it selects. */
+.theme-icon-light {
+  display: block;
+}
+
+.theme-icon-dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-icon-light {
+    display: none;
+  }
+
+  :root:not([data-theme="light"]) .theme-icon-dark {
+    display: block;
+  }
+}
+
+:root[data-theme="dark"] .theme-icon-light {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-icon-dark {
+  display: block;
+}
+
+:root[data-theme="light"] .theme-icon-light {
+  display: block;
+}
+
+:root[data-theme="light"] .theme-icon-dark {
+  display: none;
 }
 
 /* Soft shadows alone carry the shape of every surface, so restore a
