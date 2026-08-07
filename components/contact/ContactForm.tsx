@@ -47,44 +47,61 @@ export function ContactForm() {
     }
   };
 
+  // Fields are pressed into the page; the outline on focus is what carries
+  // visibility, since a soft shadow alone is not a focus indicator.
   const fieldClass =
-    "w-full rounded-xl border border-primary/20 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20";
+    "nm-inset w-full rounded-xl bg-background px-4 py-3 text-sm text-foreground outline-none placeholder:text-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink";
+
+  const labelClass = "mb-1.5 block text-[13px] font-medium text-foreground";
+
+  // No red in a black-and-white palette — errors read through the marker,
+  // the weight and the text itself.
+  const errorClass = "mt-1.5 flex items-start gap-1.5 text-[12.5px] font-medium text-ink";
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="mx-auto max-w-xl space-y-5">
       <div>
-        <label htmlFor="name" className="mb-1 block text-sm font-medium text-foreground">
+        <label htmlFor="name" className={labelClass}>
           {t("name")}
         </label>
         <input id="name" {...register("name")} className={fieldClass} />
         {errors.name && (
-          <p className="mt-1 text-sm text-red-600">{t(`validation.${errors.name.message}`)}</p>
+          <p className={errorClass}>
+            <span aria-hidden="true">!</span>
+            {t(`validation.${errors.name.message}`)}
+          </p>
         )}
       </div>
 
       <div>
-        <label htmlFor="phone" className="mb-1 block text-sm font-medium text-foreground">
+        <label htmlFor="phone" className={labelClass}>
           {t("phone")}
         </label>
         <input id="phone" type="tel" {...register("phone")} className={fieldClass} />
         {errors.phone && (
-          <p className="mt-1 text-sm text-red-600">{t(`validation.${errors.phone.message}`)}</p>
+          <p className={errorClass}>
+            <span aria-hidden="true">!</span>
+            {t(`validation.${errors.phone.message}`)}
+          </p>
         )}
       </div>
 
       <div>
-        <label htmlFor="email" className="mb-1 block text-sm font-medium text-foreground">
+        <label htmlFor="email" className={labelClass}>
           {t("email")}
         </label>
         <input id="email" type="email" {...register("email")} className={fieldClass} />
         {errors.email && (
-          <p className="mt-1 text-sm text-red-600">{t(`validation.${errors.email.message}`)}</p>
+          <p className={errorClass}>
+            <span aria-hidden="true">!</span>
+            {t(`validation.${errors.email.message}`)}
+          </p>
         )}
       </div>
 
       <div>
-        <div className="mb-1 flex items-center justify-between">
-          <label htmlFor="comment" className="text-sm font-medium text-foreground">
+        <div className="mb-1.5 flex items-center justify-between gap-3">
+          <label htmlFor="comment" className="text-[13px] font-medium text-foreground">
             {t("comment")}
           </label>
           <AiPolishButton
@@ -99,25 +116,36 @@ export function ContactForm() {
           className={`${fieldClass} resize-y`}
         />
         {errors.comment && (
-          <p className="mt-1 text-sm text-red-600">{t(`validation.${errors.comment.message}`)}</p>
+          <p className={errorClass}>
+            <span aria-hidden="true">!</span>
+            {t(`validation.${errors.comment.message}`)}
+          </p>
         )}
       </div>
 
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full rounded-full bg-primary py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+        className="nm-raised w-full rounded-full py-3.5 text-sm font-semibold text-ink transition-shadow focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink active:nm-inset disabled:cursor-not-allowed disabled:nm-inset disabled:text-muted"
       >
         {status === "loading" ? t("loading") : t("submit")}
       </button>
 
       {status === "success" && (
-        <p className="rounded-xl bg-green-50 px-4 py-3 text-sm text-green-800" role="status">
+        <p
+          className="nm-raised flex items-start gap-2.5 rounded-xl px-4 py-3 text-[13px] text-ink"
+          role="status"
+        >
+          <span aria-hidden="true">✓</span>
           {t("success")}
         </p>
       )}
       {status === "error" && (
-        <p className="rounded-xl bg-red-50 px-4 py-3 text-sm text-red-800" role="alert">
+        <p
+          className="nm-inset flex items-start gap-2.5 rounded-xl px-4 py-3 text-[13px] font-medium text-ink"
+          role="alert"
+        >
+          <span aria-hidden="true">!</span>
           {t("error")}
         </p>
       )}

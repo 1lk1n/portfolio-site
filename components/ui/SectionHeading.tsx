@@ -11,20 +11,17 @@ type SectionHeadingProps = {
 export function SectionHeading({ title, subtitle }: SectionHeadingProps) {
   return (
     <motion.div
-      className="mb-12 text-center"
+      className="mb-8"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-80px" }}
       variants={fadeUp}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
-        {title}
-      </h2>
+      <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-muted">{title}</h2>
+      <div className="mt-3 h-px w-full bg-line" />
       {subtitle && (
-        <p className="mt-3 text-base text-foreground/70 md:text-lg">
-          {subtitle}
-        </p>
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">{subtitle}</p>
       )}
     </motion.div>
   );

@@ -1,149 +1,296 @@
 {
   "meta": {
     "title": "Ilkin Ibadov — Fullstack Developer",
-    "description": "Portfolio of a fullstack developer with 4+ years of experience. Next.js, React, Node.js, Supabase."
+    "description": "Rates, services and projects of a fullstack developer with 4+ years of experience. TypeScript, Next.js, React Native, Node.js, PostgreSQL."
   },
   "nav": {
-    "about": "About",
-    "approach": "How I work",
-    "experience": "Experience",
+    "record": "Track record",
+    "skills": "Skills",
+    "projects": "Projects",
+    "rates": "Rates",
     "contact": "Contact"
   },
-  "hero": {
-    "greeting": "Hi, I'm",
+  "rateHero": {
     "name": "Ilkin Ibadov",
-    "role": "Fullstack Developer",
-    "cta": "Get in touch",
-    "ctaSecondary": "View experience"
+    "role": "Full-Stack Engineer — TypeScript / Node.js / React",
+    "lede": "Rates and terms by type of work. The figures below are grounded in the scope and nature of work I deliver in practice — the “Track record” section gives verifiable numbers.",
+    "ctaRates": "See rates",
+    "ctaContact": "Get in touch"
   },
-  "about": {
-    "title": "About me",
-    "subtitle": "Stack, experience and focus areas",
-    "bio": "Fullstack developer with 4+ years of experience building, scaling, and maintaining web and mobile applications for international markets. I specialize in the MERN stack, React Native, and scalable backend architecture. Deep expertise in Next.js for high-load frontends and NestJS for structured services. For over 2 years I've mentored junior engineers in system design, application architecture, and engineering best practices.",
-    "stackTitle": "Tech stack",
-    "stack": {
-      "frontend": "Frontend: React, Next.js, Tailwind, HTML, CSS, SCSS",
-      "backend": "Backend: Node.js, NestJS, Express.js",
-      "mobile": "Mobile: React Native",
-      "databases": "Databases: MongoDB, PostgreSQL, Redis, Supabase",
-      "state": "State management: Redux, Redux Toolkit, Zustand, Context API",
-      "devops": "DevOps: Docker, Kubernetes, AWS",
-      "languages": "Languages: JavaScript, TypeScript",
-      "tools": "Tools: Git, Postman, Figma"
+  "trackRecord": {
+    "title": "Track record",
+    "intro": "Aggregate figures across four product projects. The numbers come from repository history and source code, not from a CV description.",
+    "facts": {
+      "lines": "lines of application code",
+      "projects": "product projects",
+      "models": "database models",
+      "screens": "screens and pages",
+      "apps": "mobile applications",
+      "repos": "repositories since 2022"
+    }
+  },
+  "skills": {
+    "title": "Skills & stack",
+    "intro": "The technologies the projects below are built on. Web, mobile and infrastructure in one pair of hands.",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "databases": "Databases",
+      "state": "State management",
+      "devops": "DevOps",
+      "programming": "Programming languages",
+      "tools": "Tools & libraries"
     },
-    "languagesTitle": "Languages",
-    "languages": "English — fluent (C2, IELTS 8.5), Russian — native",
+    "spokenTitle": "Languages",
+    "spoken": ["English — C2, IELTS 8.5", "Russian — conversational"],
     "educationTitle": "Education",
-    "education": "Bachelor's in Computer Engineering — International Humanities University (Ukraine)"
+    "education": [
+      {
+        "degree": "MSc in Computer Science",
+        "school": "Nazarbayev University"
+      },
+      {
+        "degree": "BSc in Computer Engineering",
+        "school": "International University"
+      }
+    ]
   },
-  "approach": {
-    "title": "How I work",
-    "subtitle": "Approach to tasks and AI tools",
+  "projects": {
+    "title": "Projects",
+    "roleSolo": "sole developer",
+    "roleTeam": "in a team",
+    "items": {
+      "setflow": {
+        "summary": "Multi-tenant CRM + warehouse platform: deals and pipelines, double-entry stock movements, documents and quotes, omnichannel inbox, campaigns, subscriptions. Live in production on its own domain."
+      },
+      "brain": {
+        "summary": "Meditation and self-development platform: mobile app, API, content admin panel and storefront in a single monorepo. Audio and media served from S3 object storage."
+      },
+      "qala": {
+        "summary": "Services marketplace: matching workers to orders, two role-based interfaces (client and worker), chat with attachments, reviews. Two-factor auth, documented API, business plan prepared for Astana Hub."
+      },
+      "social": {
+        "title": "Social network — microservices",
+        "summary": "Four independent services: authentication, posts, real-time messaging and media storage. Each with its own data schema, Swagger documentation and rate-limiting."
+      }
+    },
+    "metrics": {
+      "lines": "lines",
+      "backendModules": "backend modules",
+      "pages": "pages",
+      "models": "models",
+      "migrations": "migrations",
+      "testLines": "lines of tests",
+      "commitShare": "of commit history",
+      "monorepoApps": "apps in the monorepo",
+      "mobileScreens": "mobile screens",
+      "components": "components",
+      "services": "services",
+      "domainSeparation": "domain separation, independent deployment"
+    },
+    "note": {
+      "strong": "The work is end-to-end, not single-specialisation.",
+      "text": "Two of the four products were built solo — from database schema and API through to the mobile app and deployment; in SetFlow the commits split almost evenly between frontend and backend. That is the main reason the rate sits above a single-layer developer’s: the client doesn’t need a second person, or the coordination between them."
+    }
+  },
+  "rates": {
+    "title": "Rates by type of work",
+    "columns": {
+      "service": "Service",
+      "usd": "USD / hr",
+      "kzt": "KZT / hr"
+    },
+    "featuredLabel": "Core strength",
+    "rows": {
+      "support": {
+        "name": "Support & maintenance",
+        "detail": "Small fixes, triage, dependency updates, monitoring"
+      },
+      "frontend": {
+        "name": "Frontend",
+        "detail": "React / Next.js, UI, state, accessibility, dark mode, i18n"
+      },
+      "mobile": {
+        "name": "Mobile development",
+        "detail": "React Native / Expo, roles and navigation, chat, media handling, store releases"
+      },
+      "backend": {
+        "name": "Backend / API",
+        "detail": "Node.js, REST, permissions, multi-tenancy, background jobs"
+      },
+      "endToEnd": {
+        "name": "End-to-end feature delivery",
+        "detail": "From schema and API through UI, tests and deploy. One owner for the whole chain"
+      },
+      "integrations": {
+        "name": "Integrations",
+        "detail": "Payments, email, messengers, OAuth, signature-verified webhooks"
+      },
+      "database": {
+        "name": "Database design & migrations",
+        "detail": "Schema, indexing, zero-downtime migrations, data integrity"
+      },
+      "devops": {
+        "name": "DevOps & infrastructure",
+        "detail": "Docker, CI/CD, domains and DNS, CDN, environments, incident response"
+      },
+      "testing": {
+        "name": "Testing & QA automation",
+        "detail": "Unit, integration, E2E (Playwright), load-testing harnesses"
+      },
+      "security": {
+        "name": "Security audit",
+        "detail": "Tenant isolation, authentication, webhook signatures, dependencies, report with verified findings"
+      },
+      "architecture": {
+        "name": "Architecture & consulting",
+        "detail": "System review, scaling plans, code review, risk assessment"
+      }
+    },
+    "footnote": "★ — areas where my profile delivers the most client value. Converted at ≈500 ₸ per $1; where the rate differs, the USD figure governs."
+  },
+  "engagement": {
+    "title": "Engagement models",
+    "items": {
+      "fullTime": {
+        "title": "Full-time employment",
+        "price": "$3,000–5,000 / mo",
+        "text": "Full-time, full ownership of a domain. Below the hourly equivalent — that discount buys stability and long-term product ownership."
+      },
+      "partTime": {
+        "title": "Part-time",
+        "price": "from $1,800 / mo",
+        "text": "20–25 hrs/week on fixed days. Fits when you need a strong engineer but not a full-time one."
+      },
+      "retainer": {
+        "title": "Support retainer",
+        "price": "from $700 / mo",
+        "text": "Agreed hour bank, priority response, security updates. Unused hours roll over one month."
+      },
+      "fixedPrice": {
+        "title": "Fixed-price project",
+        "price": "estimate +20%",
+        "text": "Fixed price where scope is well defined. The premium covers uncertainty risk; hourly work carries none."
+      }
+    }
+  },
+  "modifiers": {
+    "title": "Modifiers & conditions",
+    "columns": {
+      "condition": "Condition",
+      "uplift": "Uplift",
+      "why": "Why"
+    },
+    "rows": {
+      "rush": {
+        "condition": "Rush — start within 48 hours",
+        "uplift": "+50%",
+        "why": "Displaces already-committed work"
+      },
+      "offHours": {
+        "condition": "Weekend / night work",
+        "uplift": "+50–100%",
+        "why": "Off-hours releases, incidents"
+      },
+      "onCall": {
+        "condition": "On-call rotation",
+        "uplift": "+15% of salary",
+        "why": "Availability outside the schedule"
+      },
+      "legacy": {
+        "condition": "Undocumented legacy code",
+        "uplift": "+25%",
+        "why": "Time goes to comprehension before change"
+      },
+      "longTerm": {
+        "condition": "Long engagement — 3 months+",
+        "uplift": "−10%",
+        "why": "Predictable utilisation"
+      },
+      "prepay": {
+        "condition": "Quarterly prepayment",
+        "uplift": "−5%",
+        "why": "Removes payment risk"
+      }
+    }
+  },
+  "included": {
+    "title": "What the rate includes",
+    "includedTitle": "Included",
+    "included": [
+      "Tests for new code",
+      "Meaningful commit messages and review turnaround",
+      "Deployment and production verification",
+      "Fixing my own bugs — free for 30 days",
+      "Handover: how it works and why it’s built that way"
+    ],
+    "billedTitle": "Billed separately",
+    "billed": [
+      "Scope changes after sign-off",
+      "Meetings beyond one hour per week",
+      "Hosting, licences, third-party services",
+      "Maintaining code I did not write",
+      "Design mockups and copywriting"
+    ]
+  },
+  "justification": {
+    "title": "What justifies the rate",
     "items": [
       {
-        "title": "Understand the problem",
-        "text": "I clarify business goals, constraints, and definition of done first. Work is decomposed into iterations with measurable outcomes."
+        "strong": "One person instead of two.",
+        "text": "A task goes from database to interface without a handoff — saving not just the second salary but the coordination time around it."
       },
       {
-        "title": "Architecture and quality",
-        "text": "API and UI are designed for scale, typing, and testability. Code review, linters, and shared patterns are part of every delivery."
+        "strong": "Web and mobile aren’t separate hires.",
+        "text": "Two React Native apps (67 screens) and React web interfaces over a shared backend: one codebase of types and contracts instead of two teams reconciling an API between them."
       },
       {
-        "title": "Ship fast",
-        "text": "MVP-first mindset: a working end-to-end flow first, then performance and UX improvements."
+        "strong": "Different architectures for different problems.",
+        "text": "A modular monolith, a multi-app monorepo and a set of NestJS microservices — the approach is chosen to fit the problem, not out of habit with one stack."
+      },
+      {
+        "strong": "Production, not just development.",
+        "text": "Domains and DNS, CDN, mail infrastructure, incident response on live traffic — the work doesn’t end at merge."
+      },
+      {
+        "strong": "Security as part of the job.",
+        "text": "Tenant data isolation, webhook signature verification, closing dependency vulnerabilities — with findings verified against a live system, not copied from a scanner report."
+      },
+      {
+        "strong": "Verifiability.",
+        "text": "The claims above are backed by repository history and test suites, not by a CV description."
       }
     ],
-    "aiTitle": "How I use AI",
-    "aiItems": [
-      "At daytwo.ai I integrated LLM APIs into a production platform: prompt design, error handling, rate limits, and monitoring.",
-      "Day to day I use Cursor and Copilot for boilerplate, refactors, and docs; I always review the final code manually.",
-      "When mentoring, I show how AI speeds up learning without replacing architecture understanding and debugging skills."
-    ]
-  },
-  "experience": {
-    "title": "Cases & experience",
-    "subtitle": "Real projects and roles",
-    "jobs": [
-      {
-        "role": "Fullstack Developer",
-        "company": "daytwo.ai",
-        "period": "February 2025 — February 2026",
-        "bullets": [
-          "Built and maintained production-grade apps with Next.js, Node.js, Express, and Supabase.",
-          "Integrated AI/LLM APIs into the web platform.",
-          "Worked in a distributed team on rapid prototyping and MVP releases."
-        ]
-      },
-      {
-        "role": "Backend Instructor",
-        "company": "Div Academy",
-        "period": "October 2025 — February 2026",
-        "bullets": [
-          "Taught backend development through hands-on projects and mentorship.",
-          "Designed a curriculum that helped 90% of students significantly improve their technical level."
-        ]
-      },
-      {
-        "role": "MERN Stack Instructor",
-        "company": "STEP IT Academy",
-        "period": "January 2024 — present",
-        "bullets": [
-          "Trained 200+ students in MERN and React Native with practical project mentoring.",
-          "Led programming skill sessions; 90% of students reported major professional growth."
-        ]
-      },
-      {
-        "role": "Web & Mobile Developer",
-        "company": "Sabah.HUB",
-        "period": "April 2023 — October 2024",
-        "bullets": [
-          "Built scalable web and mobile products serving thousands of active users.",
-          "Introduced secure data practices and optimized system performance."
-        ]
-      },
-      {
-        "role": "Web Developer",
-        "company": "BrainPriz",
-        "period": "November 2022 — April 2023",
-        "bullets": [
-          "Designed client-side architecture focused on performance and data security.",
-          "Improved UI/UX and fixed critical bugs — 15% increase in user engagement."
-        ]
-      },
-      {
-        "role": "Web & Mobile Developer",
-        "company": "IZZI",
-        "period": "June 2022 — September 2022",
-        "bullets": [
-          "Created and optimized mobile and web apps in close collaboration with cross-functional teams."
-        ]
-      }
-    ]
+    "note": {
+      "strong": "How to read these numbers.",
+      "text": "The lower bound is a well-defined task in a familiar stack. The upper bound is tight deadlines, unfamiliar code, or a high cost of failure. Rates are negotiable: scope, duration and predictability move them more than the category of work does."
+    }
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Leave a message — I'll get back to you soon",
+    "subtitle": "Leave a message — I'll get back to you shortly",
     "name": "Name",
     "phone": "Phone",
     "email": "Email",
     "comment": "Message",
     "submit": "Send",
-    "polish": "Polish message (AI)",
-    "polishing": "Polishing…",
-    "polishError": "Could not polish the text. Please try again later.",
-    "polishUnavailable": "AI helper is unavailable without OPENAI_API_KEY.",
-    "success": "Message sent! A copy will arrive at your email.",
-    "error": "Failed to send. Please check your data and try again.",
+    "polish": "Improve message (AI)",
+    "polishing": "Improving…",
+    "polishError": "Couldn't improve the text. Please try again later.",
+    "success": "Message sent! A copy will arrive in your inbox.",
+    "error": "Couldn't send. Please check the fields and try again.",
     "loading": "Sending…",
     "validation": {
-      "name": "Enter a name (at least 2 characters)",
+      "name": "Enter your name (at least 2 characters)",
       "phone": "Enter a valid phone number",
       "email": "Enter a valid email",
       "comment": "Message must be at least 10 characters"
     }
   },
   "footer": {
-    "rights": "All rights reserved"
+    "rights": "All rights reserved",
+    "validity": "current as of August 2026 · rates valid for 90 days"
   },
   "links": {
     "email": "ilkin.ibadzada@gmail.com",
@@ -152,15 +299,14 @@
     "telegram": "Telegram"
   },
   "chatbot": {
-    "title": "Ask about me",
+    "title": "Ask me anything",
     "subtitle": "Portfolio AI assistant",
-    "welcome": "Hi! I can answer questions about my experience, stack, projects, and collaboration. What would you like to know?",
-    "placeholder": "e.g. What is your experience with Next.js?",
+    "welcome": "Hi! I can answer questions about my experience, stack, projects, rates and engagement models. What would you like to know?",
+    "placeholder": "e.g. what does end-to-end feature delivery cost?",
     "send": "Send",
     "open": "Open chat",
     "close": "Close chat",
-    "hint": "Professional questions about Ilkin only",
-    "error": "Could not get a reply. Please try again later.",
-    "unavailable": "Chat is unavailable without OPENAI_API_KEY."
+    "hint": "Questions about Ilkin's professional background only",
+    "error": "Couldn't get a response. Please try again later."
   }
 }

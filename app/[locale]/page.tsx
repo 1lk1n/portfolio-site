@@ -1,8 +1,13 @@
 import { setRequestLocale } from "next-intl/server";
-import { Hero } from "@/components/sections/Hero";
-import { About } from "@/components/sections/About";
-import { Approach } from "@/components/sections/Approach";
-import { Experience } from "@/components/sections/Experience";
+import { RateHero } from "@/components/sections/RateHero";
+import { TrackRecord } from "@/components/sections/TrackRecord";
+import { Skills } from "@/components/sections/Skills";
+import { Projects } from "@/components/sections/Projects";
+import { Rates } from "@/components/sections/Rates";
+import { Engagement } from "@/components/sections/Engagement";
+import { Modifiers } from "@/components/sections/Modifiers";
+import { Included } from "@/components/sections/Included";
+import { Justification } from "@/components/sections/Justification";
 import { Contact } from "@/components/sections/Contact";
 
 type PageProps = {
@@ -15,10 +20,15 @@ export default async function HomePage({ params }: PageProps) {
 
   return (
     <>
-      <Hero />
-      <About />
-      <Approach />
-      <Experience />
+      <RateHero />
+      <TrackRecord />
+      <Skills />
+      <Projects />
+      <Rates />
+      <Engagement />
+      <Modifiers />
+      <Included />
+      <Justification />
       <Contact />
     </>
   );

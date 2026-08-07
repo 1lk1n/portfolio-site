@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { AiAvailabilityProvider } from "@/components/ai/AiAvailabilityProvider";
 import { PortfolioChatbot } from "@/components/chat/PortfolioChatbot";
 import "../globals.css";
 
@@ -48,13 +49,21 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-cream text-foreground">
+    // Next 16 no longer overrides `scroll-behavior` on navigation unless asked;
+    // this page is all in-page anchors, so opt back in.
+    <html
+      lang={locale}
+      data-scroll-behavior="smooth"
+      className={`${inter.variable} h-full antialiased`}
+    >
+      <body className="flex min-h-full flex-col bg-background text-foreground">
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <PortfolioChatbot />
+          <AiAvailabilityProvider>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <PortfolioChatbot />
+          </AiAvailabilityProvider>
         </NextIntlClientProvider>
       </body>
     </html>

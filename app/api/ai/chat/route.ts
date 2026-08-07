@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
+import { recordAiFailure, recordAiSuccess } from "@/lib/ai/availability";
 import { buildChatSystemPrompt } from "@/lib/ai/portfolio-context";
 import { chatRequestSchema } from "@/lib/validations/chat";
 
@@ -42,9 +43,17 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "empty" }, { status: 500 });
     }
 
+    recordAiSuccess();
     return NextResponse.json({ reply });
   } catch (error) {
     console.error("AI chat error:", error);
+
+    // A bad key, exhausted credit or a provider outage means the feature can't
+    // work at all — tell the client so it hides itself instead of retrying.
+    if (recordAiFailure(error)) {
+      return NextResponse.json({ error: "unavailable" }, { status: 503 });
+    }
+
     return NextResponse.json({ error: "server" }, { status: 500 });
   }
 }
