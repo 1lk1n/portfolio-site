@@ -19,20 +19,15 @@ export function Footer() {
               {links("email")}
             </a>
             <a
-              href="https://linkedin.com/in/ilkinibadov"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted transition-colors hover:text-foreground"
-            >
-              {links("linkedin")}
-            </a>
-            <a
-              href="https://github.com/ilkin-ibadov"
+              href="https://github.com/1lk1n"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted transition-colors hover:text-foreground"
             >
               {links("github")}
+            </a>
+            <a href="https://t.me/ilkin_i" className="text-muted transition-colors hover:text-foreground">
+              {links("telegram")}
             </a>
           </div>
         </div>

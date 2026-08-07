@@ -20,7 +20,7 @@
   },
   "trackRecord": {
     "title": "Track record",
-    "intro": "Aggregate figures across four product projects. The numbers come from repository history and source code, not from a CV description.",
+    "intro": "Aggregate figures across three product projects. The numbers come from repository history and source code, not from a CV description.",
     "facts": {
       "lines": "lines of application code",
       "projects": "product projects",
@@ -58,7 +58,7 @@
     ]
   },
   "projects": {
-    "title": "Projects",
+    "title": "Recent projects",
     "roleSolo": "sole developer",
     "roleTeam": "in a team",
     "items": {
@@ -70,10 +70,6 @@
       },
       "qala": {
         "summary": "Services marketplace: matching workers to orders, two role-based interfaces (client and worker), chat with attachments, reviews. Two-factor auth, documented API, business plan prepared for Astana Hub."
-      },
-      "social": {
-        "title": "Social network — microservices",
-        "summary": "Four independent services: authentication, posts, real-time messaging and media storage. Each with its own data schema, Swagger documentation and rate-limiting."
       }
     },
     "metrics": {
@@ -86,13 +82,11 @@
       "commitShare": "of commit history",
       "monorepoApps": "apps in the monorepo",
       "mobileScreens": "mobile screens",
-      "components": "components",
-      "services": "services",
-      "domainSeparation": "domain separation, independent deployment"
+      "components": "components"
     },
     "note": {
       "strong": "The work is end-to-end, not single-specialisation.",
-      "text": "Two of the four products were built solo — from database schema and API through to the mobile app and deployment; in SetFlow the commits split almost evenly between frontend and backend. That is the main reason the rate sits above a single-layer developer’s: the client doesn’t need a second person, or the coordination between them."
+      "text": "Two of the three products were built solo — from database schema and API through to the mobile app and deployment; in SetFlow the commits split almost evenly between frontend and backend. That is the main reason the rate sits above a single-layer developer’s: the client doesn’t need a second person, or the coordination between them."
     }
   },
   "rates": {
@@ -295,7 +289,6 @@
   },
   "links": {
     "email": "ilkin.ibadzada@gmail.com",
-    "linkedin": "LinkedIn",
     "github": "GitHub",
     "telegram": "Telegram"
   },

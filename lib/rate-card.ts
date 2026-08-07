@@ -9,7 +9,7 @@
 
 export const FACTS = [
   { id: "lines", value: "174k" },
-  { id: "projects", value: "4" },
+  { id: "projects", value: "3" },
   { id: "models", value: "165" },
   { id: "screens", value: "144" },
   { id: "apps", value: "2" },
@@ -95,20 +95,6 @@ export const PROJECTS: readonly Project[] = [
       { value: "31", id: "models" },
     ],
   },
-  {
-    id: "social",
-    solo: true,
-    chips: [
-      "NestJS",
-      "TypeScript",
-      "MongoDB · TypeORM",
-      "Socket.IO",
-      "JWT · Passport",
-      "AWS S3",
-      "Swagger",
-    ],
-    metrics: [{ value: "4", id: "services" }, { id: "domainSeparation" }],
-  },
 ] as const;
 
 /** Converted at ≈500 ₸ per $1; the USD figure governs. */
@@ -153,7 +139,7 @@ export const SKILL_GROUPS = [
   { id: "databases", items: ["MongoDB", "PostgreSQL", "Redis", "Supabase"] },
   { id: "state", items: ["Redux", "Redux Toolkit", "Zustand", "Context API"] },
   { id: "devops", items: ["Docker", "Kubernetes", "AWS"] },
-  { id: "programming", items: ["JavaScript", "TypeScript"] },
+  { id: "programming", items: ["JavaScript", "TypeScript", "Python", "Go"] },
   {
     id: "tools",
     items: ["Git", "Postman", "Figma", "TanStack Query", "TanStack Form"],

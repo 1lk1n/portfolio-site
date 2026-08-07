@@ -62,22 +62,14 @@ export function RateHero() {
             {links("email")}
           </a>
           <a
-            href="https://linkedin.com/in/ilkinibadov"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted transition-colors hover:text-accent"
-          >
-            {links("linkedin")}
-          </a>
-          <a
-            href="https://github.com/ilkin-ibadov"
+            href="https://github.com/1lk1n"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted transition-colors hover:text-accent"
           >
             {links("github")}
           </a>
-          <a href="https://t.me/+994515391161" className="text-muted transition-colors hover:text-accent">
+          <a href="https://t.me/ilkin_i" className="text-muted transition-colors hover:text-accent">
             {links("telegram")}
           </a>
         </motion.div>

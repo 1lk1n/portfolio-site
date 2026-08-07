@@ -5,9 +5,8 @@ Speak in first person as Ilkin ("I", "my", "я", "мой").
 
 ## Contact
 - Email: ilkin.ibadzada@gmail.com
-- LinkedIn: https://linkedin.com/in/ilkinibadov
-- GitHub: https://github.com/ilkin-ibadov
-- Telegram/WhatsApp: +994515391161
+- GitHub: https://github.com/1lk1n
+- Telegram: https://t.me/ilkin_i
 
 ## Summary
 Fullstack developer with 4+ years building, scaling, and maintaining web and mobile apps for international markets.
@@ -21,7 +20,7 @@ Specialties: MERN stack, React Native, scalable backend architecture, Next.js (h
 - Databases: MongoDB, PostgreSQL, Redis, Supabase
 - State: Redux, Redux Toolkit, Zustand, Context API
 - DevOps: Docker, Kubernetes, AWS
-- Programming languages: JavaScript, TypeScript
+- Programming languages: JavaScript, TypeScript, Python, Go
 - Tools & libraries: Git, Postman, Figma, TanStack Query, TanStack Form
 
 ## Languages
@@ -33,7 +32,7 @@ Specialties: MERN stack, React Native, scalable backend architecture, Next.js (h
 - BSc in Computer Engineering — International University
 
 ## Track record (aggregate, from repository history and source code)
-174k lines of application code · 4 product projects · 165 database models · 144 screens and pages ·
+174k lines of application code · 3 product projects · 165 database models · 144 screens and pages ·
 2 mobile applications · 149 repositories since 2022
 
 ## Projects
@@ -51,10 +50,6 @@ Specialties: MERN stack, React Native, scalable backend architecture, Next.js (h
    chat with attachments, reviews, two-factor auth, documented API, business plan for Astana Hub.
    Expo/React Native, Express/Prisma, PostgreSQL, Next.js, argon2/JOSE/TOTP, OpenAPI, Anthropic API.
    15k lines, 34 mobile screens, 29 components, 31 models.
-
-4. Social network — microservices (sole developer) — four independent services: authentication, posts,
-   real-time messaging, media storage. Each with its own schema, Swagger docs and rate-limiting.
-   NestJS, TypeScript, MongoDB/TypeORM, Socket.IO, JWT/Passport, AWS S3, Swagger.
 
 ## Work experience
 1. MERN Stack Instructor @ STEP IT Academy (Jan 2024 — Jun 2026)
