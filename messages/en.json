@@ -18,7 +18,7 @@
   },
   "skills": {
     "title": "Skills & stack",
-    "intro": "The technologies the projects below are built on. Web, mobile and infrastructure in one pair of hands.",
+    "intro": "The technologies the projects below are built on.",
     "groups": {
       "frontend": "Frontend",
       "backend": "Backend",

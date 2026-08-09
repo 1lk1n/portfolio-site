@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AiAvailabilityProvider } from "@/components/ai/AiAvailabilityProvider";
+import { ThemeSync } from "@/components/layout/ThemeSync";
 import { PortfolioChatbot } from "@/components/chat/PortfolioChatbot";
 import { themeInitScript } from "@/lib/theme";
 import "../globals.css";
@@ -68,6 +69,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className="flex min-h-full flex-col bg-background text-foreground">
+        {/* Switching locale re-renders <html> and strips the theme attribute
+            the pre-paint script set; this puts it back before the next paint. */}
+        <ThemeSync />
         <NextIntlClientProvider messages={messages}>
           <AiAvailabilityProvider>
             <Header />
