@@ -29,7 +29,7 @@ export function Skills() {
             variants={fadeUp}
             className="rounded-3xl bg-surface px-6 py-6"
           >
-            <h3 className="text-xs font-semibold uppercase tracking-wide text-muted">
+            <h3 className="text-xs font-semibold uppercase tracking-wide text-foreground">
               {t(`groups.${group.id}`)}
             </h3>
             <div className="mt-4 flex flex-wrap gap-2">
@@ -43,7 +43,7 @@ export function Skills() {
         {/* Sits in the same grid so the odd number of stack groups still
             closes the two columns evenly. */}
         <motion.div variants={fadeUp} className="rounded-3xl bg-surface px-6 py-6">
-          <h3 className="text-xs font-semibold uppercase tracking-wide text-muted">
+          <h3 className="text-xs font-semibold uppercase tracking-wide text-foreground">
             {t("spokenTitle")}
           </h3>
           <ul className="mt-4 space-y-1.5">
