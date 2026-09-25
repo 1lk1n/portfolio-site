@@ -1,152 +1,109 @@
 {
   "meta": {
-    "title": "Ilkin Ibadov — Fullstack Developer",
-    "description": "Rates, services and projects of a fullstack developer with 4+ years of experience. TypeScript, Next.js, React Native, Node.js, PostgreSQL."
+    "title": "Ilkin Ibadov — Backend Developer",
+    "description": "Rates and engagement models of a backend developer with 4+ years of experience. Go, TypeScript, Kafka, PostgreSQL, payments and crypto rails, Kubernetes."
   },
   "nav": {
     "skills": "Skills",
-    "projects": "Projects",
     "rates": "Rates",
     "contact": "Contact",
     "theme": "Light or dark theme"
   },
   "rateHero": {
     "name": "Ilkin Ibadov",
-    "lede": "Fullstack developer with over 4 years of experience. I do it all: from frontend and mobile development to backend, infrastructure deployment and security.",
+    "lede": "Backend developer with over 4 years of experience. I build the systems where money moves — payments, wallets, crypto rails and event-driven services in Go and TypeScript. Open to remote roles in iGaming.",
     "ctaRates": "See rates",
     "ctaContact": "Get in touch"
   },
   "skills": {
     "title": "Skills & stack",
-    "intro": "The technologies the projects below are built on.",
+    "intro": "Backend first: the stack behind payment, wallet and event-driven systems.",
     "groups": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "mobile": "Mobile",
-      "databases": "Databases",
-      "state": "State management",
-      "devops": "DevOps",
       "programming": "Programming languages",
-      "tools": "Tools & libraries"
+      "backend": "Backend",
+      "data": "Data & messaging",
+      "payments": "Payments & crypto",
+      "infrastructure": "Infrastructure",
+      "observability": "Observability",
+      "ai": "AI / ML"
     },
     "spokenTitle": "Languages",
-    "spoken": ["English — C2 — IELTS 8.5", "Russian — fluent"],
-    "educationTitle": "Education",
-    "education": [
-      {
-        "degree": "MSc in Computer Science (Abai Kunanbayev scholarship)",
-        "school": "Nazarbayev University"
-      },
-      {
-        "degree": "BSc in Computer Engineering",
-        "school": "International University (Odesa, Ukraine)"
-      }
+    "spoken": [
+      "English — C2 — IELTS 8.5",
+      "Russian — fluent"
     ]
-  },
-  "projects": {
-    "title": "Recent projects",
-    "roleSolo": "sole developer",
-    "roleTeam": "in a team",
-    "items": {
-      "setflow": {
-        "summary": "Multi-tenant CRM + warehouse platform: deals and pipelines, double-entry stock movements, documents and quotes, omnichannel inbox, campaigns, subscriptions. Live in production on its own domain."
-      },
-      "brain": {
-        "summary": "Meditation and self-development platform: mobile app, API, content admin panel and storefront in a single monorepo. Audio and media served from S3 object storage."
-      },
-      "qala": {
-        "summary": "Services marketplace: matching workers to orders, two role-based interfaces (client and worker), chat with attachments, reviews. Two-factor auth, documented API, business plan prepared for Astana Hub."
-      }
-    },
-    "metrics": {
-      "lines": "lines",
-      "backendModules": "backend modules",
-      "pages": "pages",
-      "models": "models",
-      "migrations": "migrations",
-      "testLines": "lines of tests",
-      "commitShare": "of commit history",
-      "monorepoApps": "apps in the monorepo",
-      "mobileScreens": "mobile screens",
-      "components": "components"
-    },
-    "note": {
-      "strong": "The work is end-to-end, not single-specialisation.",
-      "text": "Two of the three products were built solo — from database schema and API through to the mobile app and deployment; in SetFlow the commits split almost evenly between frontend and backend. That is the main reason the rate sits above a single-layer developer’s: the client doesn’t need a second person, or the coordination between them."
-    }
   },
   "rates": {
     "title": "Rates by type of work",
     "columns": {
       "service": "Service",
-      "usd": "USD / hr",
-      "kzt": "KZT / hr"
+      "usd": "USD / hr"
     },
     "featuredLabel": "Core strength",
     "rows": {
       "support": {
         "name": "Support & maintenance",
-        "detail": "Small fixes, triage, dependency updates, monitoring"
-      },
-      "frontend": {
-        "name": "Frontend",
-        "detail": "React / Next.js, UI, state, accessibility, dark mode, i18n"
-      },
-      "mobile": {
-        "name": "Mobile development",
-        "detail": "React Native / Expo, roles and navigation, chat, media handling, store releases"
+        "detail": "On-call fixes, incident triage, dependency updates, monitoring"
       },
       "backend": {
-        "name": "Backend / API",
-        "detail": "Node.js, REST, permissions, multi-tenancy, background jobs"
+        "name": "Backend services & APIs",
+        "detail": "Go / NestJS services, gRPC, REST, WebSockets, auth and permissions"
       },
-      "endToEnd": {
-        "name": "End-to-end feature delivery",
-        "detail": "From schema and API through UI, tests and deploy. One owner for the whole chain"
+      "payments": {
+        "name": "Payments & wallet systems",
+        "detail": "Double-entry ledgers, idempotent deposits and withdrawals, balance reconciliation"
+      },
+      "crypto": {
+        "name": "Crypto payment rails",
+        "detail": "USDT (TRC-20 / ERC-20), BTC, ETH: confirmations, reorg handling, hot/cold wallet flows, Fireblocks"
+      },
+      "eventDriven": {
+        "name": "Event-driven architecture",
+        "detail": "Kafka, RabbitMQ, NATS; CQRS, sagas, outbox pattern"
+      },
+      "data": {
+        "name": "Data & storage",
+        "detail": "PostgreSQL, Redis, ClickHouse, MongoDB: schema, indexing, zero-downtime migrations, analytics"
       },
       "integrations": {
-        "name": "Integrations",
-        "detail": "Payments, email, messengers, OAuth, signature-verified webhooks"
+        "name": "KYC/AML & third-party integrations",
+        "detail": "Verification and screening providers, signature-verified webhooks, retries and reconciliation"
       },
-      "database": {
-        "name": "Database design & migrations",
-        "detail": "Schema, indexing, zero-downtime migrations, data integrity"
+      "infrastructure": {
+        "name": "Infrastructure & DevOps",
+        "detail": "Kubernetes, Docker, AWS, Terraform, ArgoCD, GitHub Actions"
       },
-      "devops": {
-        "name": "DevOps & infrastructure",
-        "detail": "Docker, CI/CD, domains and DNS, CDN, environments, incident response"
+      "observability": {
+        "name": "Observability & load testing",
+        "detail": "Prometheus, Grafana, OpenTelemetry, Loki, Sentry; k6 load tests before peak traffic"
       },
-      "testing": {
-        "name": "Testing & QA automation",
-        "detail": "Unit, integration, E2E (Playwright), load-testing harnesses"
-      },
-      "security": {
-        "name": "Security audit",
-        "detail": "Tenant isolation, authentication, webhook signatures, dependencies, report with verified findings"
+      "risk": {
+        "name": "Fraud, risk & AI",
+        "detail": "Fraud and risk scoring models, LLM integration (OpenAI, Anthropic), embeddings, RAG"
       },
       "architecture": {
         "name": "Architecture & consulting",
-        "detail": "System review, scaling plans, code review, risk assessment"
+        "detail": "System and security review, high-load design, scaling plans, code review"
       }
     },
-    "footnote": "★ — areas where my profile delivers the most client value. Converted at ≈500 ₸ per $1; where the rate differs, the USD figure governs."
+    "footnote": "★ — areas where my profile delivers the most client value."
   },
   "engagement": {
     "title": "Engagement models",
     "items": {
       "fullTime": {
         "title": "Full-time employment",
-        "price": "$3,000–5,000 / mo",
+        "price": "$5,000–8,000 / mo",
         "text": "Full-time, full ownership of a domain. Below the hourly equivalent — that discount buys stability and long-term product ownership."
       },
       "partTime": {
         "title": "Part-time",
-        "price": "from $1,800 / mo",
+        "price": "from $3,000 / mo",
         "text": "20–25 hrs/week on fixed days. Fits when you need a strong engineer but not a full-time one."
       },
       "retainer": {
         "title": "Support retainer",
-        "price": "from $700 / mo",
+        "price": "from $1,200 / mo",
         "text": "Agreed hour bank, priority response, security updates. Unused hours roll over one month."
       },
       "fixedPrice": {
@@ -200,9 +157,9 @@
     "title": "What the rate includes",
     "includedTitle": "Included",
     "included": [
-      "Tests for new code",
+      "Tests for new code, including retry and failure paths",
       "Meaningful commit messages and review turnaround",
-      "Deployment and production verification",
+      "Deployment, metrics and alerts for what I ship",
       "Fixing my own bugs — free for 30 days",
       "Handover: how it works and why it’s built that way"
     ],
@@ -212,35 +169,35 @@
       "Meetings beyond one hour per week",
       "Hosting, licences, third-party services",
       "Maintaining code I did not write",
-      "Design mockups and copywriting"
+      "Frontend, mobile and design work"
     ]
   },
   "justification": {
     "title": "Why me",
     "items": [
       {
-        "strong": "One person instead of two.",
-        "text": "A task goes from database to interface without a handoff — saving not just the second salary but the coordination time around it."
+        "strong": "Money that adds up.",
+        "text": "Double-entry ledgers, idempotency keys and the outbox pattern: a retried request or a crashed consumer never credits a balance twice."
       },
       {
-        "strong": "Web and mobile aren’t separate hires.",
-        "text": "Two React Native apps (67 screens) and React web interfaces over a shared backend: one codebase of types and contracts instead of two teams reconciling an API between them."
+        "strong": "Crypto rails end to end.",
+        "text": "USDT on TRC-20 and ERC-20, BTC and ETH — confirmation thresholds, reorg handling, hot/cold wallet flows and Fireblocks custody."
       },
       {
-        "strong": "Different architectures for different problems.",
-        "text": "A modular monolith, a multi-app monorepo and a set of NestJS microservices — the approach is chosen to fit the problem, not out of habit with one stack."
+        "strong": "Built for peak traffic.",
+        "text": "Event-driven services on Kafka, RabbitMQ and NATS, load-tested with k6 before a big match or a promo launch sends the traffic."
       },
       {
         "strong": "Production, not just development.",
-        "text": "Domains and DNS, CDN, mail infrastructure, incident response on live traffic — the work doesn’t end at merge."
+        "text": "Kubernetes, Terraform and ArgoCD to ship; Prometheus, Grafana, OpenTelemetry and Loki to see what’s happening — the work doesn’t end at merge."
       },
       {
-        "strong": "Security as part of the job.",
-        "text": "Tenant data isolation, webhook signature verification, closing dependency vulnerabilities — with findings verified against a live system, not copied from a scanner report."
+        "strong": "Risk and compliance in the flow.",
+        "text": "Fraud and risk scoring and KYC/AML checks sit inside the payment path, not bolted on after launch."
       },
       {
-        "strong": "Verifiability.",
-        "text": "The claims above are backed by repository history and test suites, not by a CV description."
+        "strong": "Fullstack roots.",
+        "text": "Years of frontend and mobile work mean APIs designed for the clients that consume them — and a back-office UI when the team needs one."
       }
     ],
     "note": {
@@ -271,7 +228,7 @@
   },
   "footer": {
     "rights": "All rights reserved",
-    "validity": "current as of August 2026 · rates valid for 90 days"
+    "validity": "current as of September 2026 · rates valid for 90 days"
   },
   "links": {
     "email": "ilkin.ibadzada@gmail.com",
@@ -281,8 +238,8 @@
   "chatbot": {
     "title": "Ask me anything",
     "subtitle": "Portfolio AI assistant",
-    "welcome": "Hi! I can answer questions about my experience, stack, projects, rates and engagement models. What would you like to know?",
-    "placeholder": "e.g. what does end-to-end feature delivery cost?",
+    "welcome": "Hi! I can answer questions about my experience, stack, rates and engagement models. What would you like to know?",
+    "placeholder": "e.g. what do crypto payment integrations cost?",
     "send": "Send",
     "open": "Open chat",
     "close": "Close chat",

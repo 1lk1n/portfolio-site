@@ -31,9 +31,6 @@ export function Rates() {
                 <th className="px-6 py-4 text-right text-xs font-semibold uppercase tracking-wide text-muted">
                   {t("columns.usd")}
                 </th>
-                <th className="px-6 py-4 text-right text-xs font-semibold uppercase tracking-wide text-muted">
-                  {t("columns.kzt")}
-                </th>
               </tr>
             </thead>
             <tbody>
@@ -69,9 +66,6 @@ export function Rates() {
                   </td>
                   <td className="whitespace-nowrap px-6 py-4 text-right align-top text-sm font-medium text-foreground tabular-nums">
                     {row.usd}
-                  </td>
-                  <td className="whitespace-nowrap px-6 py-4 text-right align-top text-sm font-medium text-foreground tabular-nums">
-                    {row.kzt}
                   </td>
                 </tr>
               ))}

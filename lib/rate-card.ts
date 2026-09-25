@@ -3,104 +3,22 @@
  *
  * Figures, tech names and ids live here rather than in messages/*.json so a
  * number can't drift between ru and en. Everything a reader has to *read* —
- * labels, descriptions, prices quoted in a local currency — is translated and
- * looked up by the ids below.
+ * labels and descriptions — is translated and looked up by the ids below.
  */
 
-type Metric = {
-  /** Absent for metrics that are a statement rather than a figure. */
-  value?: string;
-  id: string;
-};
-
-type Project = {
-  id: string;
-  /** Untranslated product name; absent when the title itself needs translating. */
-  name?: string;
-  solo: boolean;
-  chips: readonly string[];
-  metrics: readonly Metric[];
-};
-
-export const PROJECTS: readonly Project[] = [
-  {
-    id: "setflow",
-    name: "SetFlow",
-    solo: false,
-    chips: [
-      "TypeScript",
-      "Node.js · Express",
-      "Next.js · React",
-      "Prisma · PostgreSQL",
-      "WebSocket",
-      "Docker · Railway",
-      "Cloudflare",
-    ],
-    metrics: [
-      { value: "142k", id: "lines" },
-      { value: "27", id: "backendModules" },
-      { value: "77", id: "pages" },
-      { value: "93", id: "models" },
-      { value: "71", id: "migrations" },
-      { value: "10k", id: "testLines" },
-      { value: "~50%", id: "commitShare" },
-    ],
-  },
-  {
-    id: "brain",
-    name: "Brain",
-    solo: true,
-    chips: [
-      "Turborepo · pnpm",
-      "Expo · React Native",
-      "NativeWind",
-      "Express · Prisma",
-      "PostgreSQL",
-      "AWS S3 · MinIO",
-      "React · Vite",
-    ],
-    metrics: [
-      { value: "17k", id: "lines" },
-      { value: "4", id: "monorepoApps" },
-      { value: "33", id: "mobileScreens" },
-      { value: "41", id: "models" },
-    ],
-  },
-  {
-    id: "qala",
-    name: "Qala",
-    solo: true,
-    chips: [
-      "Expo · React Native",
-      "Express · Prisma",
-      "PostgreSQL",
-      "Next.js",
-      "argon2 · JOSE · TOTP",
-      "OpenAPI",
-      "Anthropic API",
-    ],
-    metrics: [
-      { value: "15k", id: "lines" },
-      { value: "34", id: "mobileScreens" },
-      { value: "29", id: "components" },
-      { value: "31", id: "models" },
-    ],
-  },
-] as const;
-
-/** Converted at ≈500 ₸ per $1; the USD figure governs. */
+/** USD per hour. */
 export const RATE_ROWS = [
-  { id: "support", usd: "25–35", kzt: "12 500–17 500", featured: false },
-  { id: "frontend", usd: "30–45", kzt: "15 000–22 500", featured: false },
-  { id: "mobile", usd: "35–50", kzt: "17 500–25 000", featured: false },
-  { id: "backend", usd: "35–50", kzt: "17 500–25 000", featured: false },
-  { id: "endToEnd", usd: "40–55", kzt: "20 000–27 500", featured: true },
-  { id: "integrations", usd: "40–55", kzt: "20 000–27 500", featured: false },
-  { id: "database", usd: "45–60", kzt: "22 500–30 000", featured: false },
-  { id: "devops", usd: "45–60", kzt: "22 500–30 000", featured: false },
-  { id: "testing", usd: "35–50", kzt: "17 500–25 000", featured: false },
-  { id: "security", usd: "60–90", kzt: "30 000–45 000", featured: true },
-  { id: "architecture", usd: "60–100", kzt: "30 000–50 000", featured: false },
+  { id: "support", usd: "35–50", featured: false },
+  { id: "backend", usd: "50–70", featured: false },
+  { id: "payments", usd: "60–85", featured: true },
+  { id: "crypto", usd: "65–95", featured: true },
+  { id: "eventDriven", usd: "55–80", featured: false },
+  { id: "data", usd: "50–70", featured: false },
+  { id: "integrations", usd: "50–70", featured: false },
+  { id: "infrastructure", usd: "50–75", featured: false },
+  { id: "observability", usd: "50–70", featured: false },
+  { id: "risk", usd: "60–90", featured: false },
+  { id: "architecture", usd: "75–110", featured: false },
 ] as const;
 
 export const ENGAGEMENTS = ["fullTime", "partTime", "retainer", "fixedPrice"] as const;
@@ -121,21 +39,63 @@ export const JUSTIFICATION_COUNT = 6;
 
 /** Tech stack, from the CV. Group labels are translated; the tools are not. */
 export const SKILL_GROUPS = [
+  { id: "programming", items: ["Go", "TypeScript", "Python"] },
   {
-    id: "frontend",
-    items: ["React", "Next.js", "Tailwind", "HTML", "CSS", "SCSS"],
+    id: "backend",
+    items: [
+      "NestJS",
+      "gRPC",
+      "REST",
+      "WebSockets",
+      "Event-driven architecture",
+      "CQRS",
+      "Sagas",
+      "Outbox pattern",
+    ],
   },
-  { id: "backend", items: ["Node.js", "NestJS", "Express.js"] },
-  { id: "mobile", items: ["React Native", "Expo"] },
-  { id: "databases", items: ["MongoDB", "PostgreSQL", "Redis", "Supabase"] },
-  { id: "state", items: ["Redux", "Redux Toolkit", "Zustand", "Context API"] },
-  { id: "devops", items: ["Docker", "Kubernetes", "AWS"] },
-  { id: "programming", items: ["JavaScript", "TypeScript", "Python", "Go"] },
   {
-    id: "tools",
-    items: ["Git", "Postman", "Figma", "TanStack Query", "TanStack Form"],
+    id: "data",
+    items: [
+      "PostgreSQL",
+      "Redis",
+      "ClickHouse",
+      "MongoDB",
+      "Kafka",
+      "RabbitMQ",
+      "NATS",
+    ],
+  },
+  {
+    id: "payments",
+    items: [
+      "Double-entry ledgers",
+      "Idempotency",
+      "USDT (TRC-20 / ERC-20)",
+      "BTC",
+      "ETH",
+      "Confirmation & reorg handling",
+      "Hot/cold wallet flows",
+      "Fireblocks",
+      "KYC/AML integrations",
+    ],
+  },
+  {
+    id: "infrastructure",
+    items: ["Kubernetes", "Docker", "AWS", "Terraform", "ArgoCD", "GitHub Actions"],
+  },
+  {
+    id: "observability",
+    items: ["Prometheus", "Grafana", "OpenTelemetry", "Loki", "Sentry", "k6 load testing"],
+  },
+  {
+    id: "ai",
+    items: [
+      "Fraud & risk scoring models",
+      "LLM integration (OpenAI, Anthropic)",
+      "Embeddings",
+      "RAG",
+    ],
   },
 ] as const;
 
 export const SPOKEN_COUNT = 2;
-export const EDUCATION_COUNT = 2;
