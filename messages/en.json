@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Ilkin Ibadov — Backend Developer",
-    "description": "Backend developer with 4+ years of experience, open to remote roles in iGaming and crypto. Go, TypeScript, Kafka, PostgreSQL, payments and crypto rails, Kubernetes."
+    "description": "Backend developer with 5+ years of experience, open to remote roles in iGaming and crypto. Go, TypeScript, Kafka, PostgreSQL, payments and crypto rails, Kubernetes."
   },
   "nav": {
     "skills": "Skills",
@@ -12,7 +12,7 @@
   "rateHero": {
     "status": "Open to remote roles in iGaming & crypto",
     "name": "Ilkin Ibadov",
-    "lede": "Backend developer with over 4 years of experience. I build the systems where money moves — payments, wallets, crypto rails and event-driven services in Go and TypeScript.",
+    "lede": "Backend developer with over 5 years of experience. I build the systems where money moves — payments, wallets, crypto rails and event-driven services in Go and TypeScript.",
     "ctaRates": "See rates",
     "ctaContact": "Get in touch"
   },

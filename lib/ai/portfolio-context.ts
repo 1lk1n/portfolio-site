@@ -9,7 +9,7 @@ Speak in first person as Ilkin ("I", "my", "я", "мой").
 - Telegram: https://t.me/ilkin_i
 
 ## Summary
-Backend developer with 4+ years of experience, focused on the systems where money moves: payment and wallet
+Backend developer with 5+ years of experience, focused on the systems where money moves: payment and wallet
 services, crypto rails and event-driven architecture in Go and TypeScript. Open to remote roles in iGaming and crypto.
 Fullstack roots: years of frontend and mobile work before specialising in backend.
 2+ years mentoring junior engineers in system design, app architecture, and engineering best practices.
