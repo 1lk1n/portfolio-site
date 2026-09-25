@@ -20,7 +20,7 @@ cp .env.example .env
 npm run dev
 ```
 
-Откройте [http://localhost:3000](http://localhost:3000) — по умолчанию откроется русская версия (`/ru`).
+Откройте [http://localhost:3000](http://localhost:3000) — по умолчанию откроется английская версия (`/en`).
 
 ## Переменные окружения
 

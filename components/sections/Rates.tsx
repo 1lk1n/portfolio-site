@@ -75,6 +75,19 @@ export function Rates() {
       </motion.div>
 
       <p className="mt-3 text-[13px] leading-relaxed text-muted">{t("footnote")}</p>
+
+      <motion.div
+        className="mt-6 rounded-2xl bg-surface px-6 py-5"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeUp}
+      >
+        <p className="text-sm leading-relaxed text-muted">
+          <strong className="font-semibold text-foreground">{t("payment.strong")}</strong>{" "}
+          {t("payment.text")}
+        </p>
+      </motion.div>
     </AnimatedSection>
   );
 }

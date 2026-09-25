@@ -14,6 +14,12 @@ import OpenAI from "openai";
 
 const MODEL = "gpt-4o-mini";
 
+/**
+ * Master switch. While false the chatbot and the polish button stay hidden and
+ * the AI routes refuse every request, key or no key. Flip to bring them back.
+ */
+export const AI_ENABLED = false;
+
 /** Trust a success for a while; recheck a failure sooner so credit top-ups show up fast. */
 const SUCCESS_TTL_MS = 5 * 60_000;
 const FAILURE_TTL_MS = 60_000;
@@ -79,7 +85,7 @@ async function runProbe(apiKey: string): Promise<boolean> {
 
 export async function isAiAvailable(): Promise<boolean> {
   const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) return false;
+  if (!AI_ENABLED || !apiKey) return false;
 
   if (cached && cached.expiresAt > Date.now()) return cached.available;
 

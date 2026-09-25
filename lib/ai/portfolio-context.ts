@@ -10,7 +10,7 @@ Speak in first person as Ilkin ("I", "my", "я", "мой").
 
 ## Summary
 Backend developer with 4+ years of experience, focused on the systems where money moves: payment and wallet
-services, crypto rails and event-driven architecture in Go and TypeScript. Open to remote roles in iGaming.
+services, crypto rails and event-driven architecture in Go and TypeScript. Open to remote roles in iGaming and crypto.
 Fullstack roots: years of frontend and mobile work before specialising in backend.
 2+ years mentoring junior engineers in system design, app architecture, and engineering best practices.
 
@@ -63,6 +63,7 @@ Fullstack roots: years of frontend and mobile work before specialising in backen
 - Fraud, risk & AI: 60–90
 - Architecture & consulting: 75–110
 Frontend and mobile work is available but quoted separately; it is not the focus.
+Payment: crypto is my preferred way to be paid, for hourly work and monthly engagements alike.
 The lower bound is a well-defined task in a familiar stack; the upper bound is tight deadlines,
 unfamiliar code, or a high cost of failure. Rates are negotiable — scope, duration and predictability
 move them more than the category of work does.

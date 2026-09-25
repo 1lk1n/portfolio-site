@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { z } from "zod";
-import { recordAiFailure, recordAiSuccess } from "@/lib/ai/availability";
+import { AI_ENABLED, recordAiFailure, recordAiSuccess } from "@/lib/ai/availability";
 
 const polishSchema = z.object({
   text: z.string().min(5).max(2000),
@@ -10,7 +10,7 @@ const polishSchema = z.object({
 export async function POST(request: Request) {
   const apiKey = process.env.OPENAI_API_KEY;
 
-  if (!apiKey) {
+  if (!AI_ENABLED || !apiKey) {
     return NextResponse.json({ error: "unavailable" }, { status: 503 });
   }
 

@@ -1,13 +1,13 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
-import { recordAiFailure, recordAiSuccess } from "@/lib/ai/availability";
+import { AI_ENABLED, recordAiFailure, recordAiSuccess } from "@/lib/ai/availability";
 import { buildChatSystemPrompt } from "@/lib/ai/portfolio-context";
 import { chatRequestSchema } from "@/lib/validations/chat";
 
 export async function POST(request: Request) {
   const apiKey = process.env.OPENAI_API_KEY;
 
-  if (!apiKey) {
+  if (!AI_ENABLED || !apiKey) {
     return NextResponse.json({ error: "unavailable" }, { status: 503 });
   }
 
@@ -19,7 +19,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "validation" }, { status: 400 });
     }
 
-    const locale = parsed.data.locale ?? "ru";
+    const locale = parsed.data.locale ?? "en";
     const recentMessages = parsed.data.messages.slice(-12);
 
     const openai = new OpenAI({ apiKey });

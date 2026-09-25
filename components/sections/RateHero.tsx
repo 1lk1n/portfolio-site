@@ -17,6 +17,14 @@ export function RateHero() {
         initial="hidden"
         animate="visible"
       >
+        <motion.p
+          variants={fadeUp}
+          className="mb-5 inline-flex items-center gap-2 rounded-full bg-surface px-3.5 py-1.5 text-xs font-medium text-foreground"
+        >
+          {/* Green reads as "available" — the one place it isn't about money saved. */}
+          <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-success" />
+          {t("status")}
+        </motion.p>
         <motion.h1
           variants={fadeUp}
           className="text-5xl font-semibold tracking-[-0.02em] text-foreground md:text-6xl lg:text-7xl"
